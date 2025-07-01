@@ -5,8 +5,11 @@
                 <div class="row">
                     <div class="ct-header-wellcome">Welcome to our consulting company <span>Consultio!</span></div>
                     <div class="ct-header-social">
-                        <a href="#" target="_blank"><i class="fab fac-facebook-f"></i></a><a href="#" target="_blank"><i class="fab fac-twitter"></i></a><a href="#" target="_blank"><i class="fab fac-linkedin-in"></i></a>
+                        <a href="#" target="_blank"><i class="fab fac-facebook-f"></i></a>
+                        <a href="#" target="_blank"><i class="fab fac-twitter"></i></a>
+                        <a href="#" target="_blank"><i class="fab fac-linkedin-in"></i></a>
                         <a href="#" target="_blank"><i class="fab fac-instagram"></i></a>
+                        <a href="https://api.whatsapp.com/send?phone=51951677400" target="_blank"><i class="fab fac-whatsapp"></i></a>
                     </div>
                 </div>
             </div>
@@ -61,10 +64,21 @@
                                     </div>
                                     <ul id="menu-main-menu" class="ct-main-menu sub-hover children-plus clearfix">
                                         <li id="menu-item-3911" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3911">
-                                            <a href="#" class="show-demos">
-                                                <span>Demos<cite class="ct-menu-item-marker">New</cite></span>
+                                            <a href="{{ route('about') }}" class="show-demos">
+                                                <span>Acerca de nosotros</span>
                                             </a>
                                         </li>
+                                        <li id="menu-item-3912" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3911">
+                                            <a href="{{ route('services') }}" class="show-demos">
+                                                <span>Servicios</span>
+                                            </a>
+                                        </li>
+                                        <li id="menu-item-3913" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3911">
+                                            <a href="{{ route('contact') }}" class="show-demos">
+                                                <span>Contáctenos</span>
+                                            </a>
+                                        </li>
+{{--
                                         <li id="menu-item-42" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children menu-item-42">
                                             <a href="#"><span>Pages</span></a>
                                             <ul class="sub-menu">
@@ -582,6 +596,7 @@
                                                 </li>
                                             </ul>
                                         </li>
+--}}
                                     </ul>
                                     <div class="ct-header-holder ct-header-holder-mobile">
                                         <div class="ct-header-info-item ct-header-call">
@@ -603,10 +618,12 @@
                                     <div class="ct-header-button-mobile"><a class="btn btn-default" href="../contact/index.htm" target="_self">Appionment</a></div>
                                 </div>
                             </nav>
+{{--
                             <div class="ct-header-meta">
                                 <div class="header-right-item h-btn-search"><i class="fac fac-search"></i></div>
                                 <div class="header-right-item h-btn-cart"><i class="fac fac-shopping-basket"></i> <span class="widget_cart_counter_header">0</span></div>
                             </div>
+--}}
                         </div>
                     </div>
                     <div class="ct-header-button">

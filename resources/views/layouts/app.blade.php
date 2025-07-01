@@ -910,6 +910,7 @@
                 </div>
             </div>
         </div>
+{{--
         <div class="ct-widget-cart-wrap">
             <div class="ct-widget-cart-overlay"></div>
             <div class="ct-widget-cart-sidebar">
@@ -925,6 +926,7 @@
                 </div>
             </div>
         </div>
+--}}
         <div id="ct-newsletter-popup">
             <div class="ct-newsletter-content">
                 <div class="ct-newsletter-content-inner">
@@ -973,7 +975,7 @@
         <script type="speculationrules">
             {"prefetch":[{"source":"document","where":{"and":[{"href_matches":"\/consultio-digital-marketing\/*"},{"not":{"href_matches":["\/consultio-digital-marketing\/wp-*.php","\/consultio-digital-marketing\/wp-admin\/*","\/consultio-digital-marketing\/wp-content\/uploads\/*","\/consultio-digital-marketing\/wp-content\/*","\/consultio-digital-marketing\/wp-content\/plugins\/*","\/consultio-digital-marketing\/wp-content\/themes\/csuti\/*","\/consultio-digital-marketing\/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
         </script>
-        <a class="pxl-buy-now" href="https://1.envato.market/dOKX3q" target="_blank"> <span>Buy on Envato</span> </a>
+        <a class="pxl-buy-now" href="https://api.whatsapp.com/send?phone=51951677400" target="_blank"> <span>Whatsapp</span> </a>
         <script>
             (function () {
                 function maybePrefixUrlField() {
