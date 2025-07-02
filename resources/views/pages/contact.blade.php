@@ -483,17 +483,16 @@ Contact v.2 &#8211; Consultio
 <script type="text/javascript" src="{{ asset('libraries/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js') }}?ver=9.3.3" id="woocommerce-js" defer="defer" data-wp-strategy="defer"></script>
 <script type="text/javascript" src="{{ asset('libraries/wp-content/uploads/siteground-optimizer-assets/ct-inline-css-js.min.js') }}?ver=3.2.1" id="ct-inline-css-js-js"></script>
 <script type="text/javascript" src="{{ asset('libraries/wp-content/uploads/siteground-optimizer-assets/ct-elementor-js.min.js') }}?ver=3.2.1" id="ct-elementor-js-js"></script>
-<link rel="https://api.w.org/" href="{{ asset('libraries/wp-json/index.htm" />
-<link rel="alternate" title="JSON" type="application/json" href="{{ asset('libraries/wp-json/wp/v2/pages/3510" />
+<link rel="https://api.w.org/" href="{{ asset('libraries/wp-json/index.htm') }}" />
+<link rel="alternate" title="JSON" type="application/json" href="{{ asset('libraries/wp-json/wp/v2/pages/3510') }}" />
 <link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://demo.casethemes.net/consultio-digital-marketing/xmlrpc.php?rsd" />
 <meta name="generator" content="WordPress 6.8.1" />
 <meta name="generator" content="WooCommerce 9.3.3" />
 <link rel="canonical" href="index.htm" />
 <link rel="shortlink" href="index.htm?p=3510" />
-<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="{{ asset('libraries/wp-json/oembed/1.0/embed-40?url=https%3A%2F%2Fdemo.casethemes.net%2Fconsultio-digital-marketing%2Fcontact-v-2%2F" />
-<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="{{ asset('libraries/wp-json/oembed/1.0/embed-41?url=https%3A%2F%2Fdemo.casethemes.net%2Fconsultio-digital-marketing%2Fcontact-v-2%2F&#038;format=xml" />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="{{ asset('libraries/wp-json/oembed/1.0/embed-40') }}?url=https%3A%2F%2Fdemo.casethemes.net%2Fconsultio-digital-marketing%2Fcontact-v-2%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="{{ asset('libraries/wp-json/oembed/1.0/embed-41') }}?url=https%3A%2F%2Fdemo.casethemes.net%2Fconsultio-digital-marketing%2Fcontact-v-2%2F&#038;format=xml" />
 <meta name="generator" content="Redux 4.5.0" />
-<link rel="icon" type="image/png" href="{{ asset('libraries/wp-content/uploads/2021/02/favicon.png" />
 <noscript>
     <style>
         .woocommerce-product-gallery {

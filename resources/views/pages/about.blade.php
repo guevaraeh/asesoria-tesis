@@ -65,7 +65,6 @@ About &#8211; Consultio
 <link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="{{ asset('libraries/wp-json/oembed/1.0/embed-2') }}?url=https%3A%2F%2Fdemo.casethemes.net%2Fconsultio-digital-marketing%2Fabout%2F" />
 <link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="{{ asset('libraries/wp-json/oembed/1.0/embed-3') }}?url=https%3A%2F%2Fdemo.casethemes.net%2Fconsultio-digital-marketing%2Fabout%2F&#038;format=xml" />
 <meta name="generator" content="Redux 4.5.0" />
-<link rel="icon" type="image/png" href="{{ asset('libraries/wp-content/uploads/2021/02/favicon.png') }}' }}" />
 <noscript>
     <style>
         .woocommerce-product-gallery {

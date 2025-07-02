@@ -5,6 +5,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" type="image/png" href="{{ asset('libraries/wp-content/uploads/2021/02/favicon.png') }}" />
         <link rel="profile" href="//gmpg.org/xfn/11" />
         <script>
             document.documentElement.className = document.documentElement.className + " yes-js js_active js";
@@ -927,6 +928,7 @@
             </div>
         </div>
 --}}
+{{--
         <div id="ct-newsletter-popup">
             <div class="ct-newsletter-content">
                 <div class="ct-newsletter-content-inner">
@@ -947,6 +949,7 @@
                 </div>
             </div>
         </div>
+--}}
         <div id="ct-mouse-move" style="display: none;">
             <div class="circle-cursor circle-cursor--outer"></div>
             <div class="circle-cursor circle-cursor--inner"></div>

@@ -9,7 +9,7 @@
                         <a href="#" target="_blank"><i class="fab fac-twitter"></i></a>
                         <a href="#" target="_blank"><i class="fab fac-linkedin-in"></i></a>
                         <a href="#" target="_blank"><i class="fab fac-instagram"></i></a>
-                        <a href="https://api.whatsapp.com/send?phone=51951677400" target="_blank"><i class="fab fac-whatsapp"></i></a>
+                        <a href="https://api.whatsapp.com/send?phone=51959348021" target="_blank"><i class="fab fac-whatsapp"></i></a>
                     </div>
                 </div>
             </div>
@@ -25,13 +25,13 @@
                     <div class="ct-header-holder">
                         <div class="ct-header-info-item ct-header-call">
                             <div class="h-item-icon"><i class="flaticon-telephone text-gradient"></i></div>
-                            <div class="h-item-meta"><label>Call Us: (210) 123-451</label> <span>(Sat - Thursday)</span></div>
-                            <a href="tel:+12312143567" target="_blank" class="h-item-link"></a>
+                            <div class="h-item-meta"><label>Llámanos: 51 959 348 021</label> <span>(Sat - Thursday)</span></div>
+                            <a href="https://api.whatsapp.com/send?phone=51959348021" target="_blank" class="h-item-link"></a>
                         </div>
                         <div class="ct-header-info-item ct-header-mail">
                             <div class="h-item-icon"><i class="flaticonv3-envelope text-gradient"></i></div>
                             <div class="h-item-meta"><label>Mail us for help:</label> <span>info@consultio.com</span></div>
-                            <a href="mailto:info@consultio.com" target="_blank" class="h-item-link"></a>
+                            <a href="mailto:guevara.eh@gmail.com" target="_blank" class="h-item-link"></a>
                         </div>
                         <div class="ct-header-info-item ct-header-address">
                             <div class="h-item-icon"><i class="flaticon-map text-gradient"></i></div>
@@ -631,8 +631,11 @@
                     </div>
                 </div>
             </div>
+
             <div id="ct-menu-mobile">
-                <span class="btn-nav-cart"><i class="fac fac-shopping-basket"></i></span> <span class="btn-nav-mobile open-menu"> <span></span> </span>
+                <span class="btn-nav-mobile open-menu"> 
+                    <span></span> 
+                </span>
             </div>
         </div>
     </div>
