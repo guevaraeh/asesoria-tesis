@@ -9,7 +9,7 @@
                         <a href="#" target="_blank"><i class="fab fac-twitter"></i></a>
                         <a href="#" target="_blank"><i class="fab fac-linkedin-in"></i></a>
                         <a href="#" target="_blank"><i class="fab fac-instagram"></i></a>
-                        <a href="https://api.whatsapp.com/send?phone=51959348021" target="_blank"><i class="fab fac-whatsapp"></i></a>
+                        <a href="https://api.whatsapp.com/send?phone=51{{ $main_phone->number }}" target="_blank"><i class="fab fac-whatsapp"></i></a>
                     </div>
                 </div>
             </div>
@@ -25,13 +25,13 @@
                     <div class="ct-header-holder">
                         <div class="ct-header-info-item ct-header-call">
                             <div class="h-item-icon"><i class="flaticon-telephone text-gradient"></i></div>
-                            <div class="h-item-meta"><label>Llámanos: 51 959 348 021</label> <span>(Sat - Thursday)</span></div>
-                            <a href="https://api.whatsapp.com/send?phone=51959348021" target="_blank" class="h-item-link"></a>
+                            <div class="h-item-meta"><label>Llámanos: 51 {{ $main_phone->number }}</label> <span>(Sat - Thursday)</span></div>
+                            <a href="https://api.whatsapp.com/send?phone=51{{ $main_phone->number }}" target="_blank" class="h-item-link"></a>
                         </div>
                         <div class="ct-header-info-item ct-header-mail">
                             <div class="h-item-icon"><i class="flaticonv3-envelope text-gradient"></i></div>
-                            <div class="h-item-meta"><label>Mail us for help:</label> <span>info@consultio.com</span></div>
-                            <a href="mailto:guevara.eh@gmail.com" target="_blank" class="h-item-link"></a>
+                            <div class="h-item-meta"><label>Correo para consulta:</label> <span>{{ $main_email->email }}</span></div>
+                            <a href="mailto:{{ $main_email->email }}" target="_blank" class="h-item-link"></a>
                         </div>
                         <div class="ct-header-info-item ct-header-address">
                             <div class="h-item-icon"><i class="flaticon-map text-gradient"></i></div>
@@ -64,18 +64,23 @@
                                     </div>
                                     <ul id="menu-main-menu" class="ct-main-menu sub-hover children-plus clearfix">
                                         <li id="menu-item-3911" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3911">
-                                            <a href="{{ route('about') }}" class="show-demos">
+                                            <a href="{{ route('about') }}">
                                                 <span>Acerca de nosotros</span>
                                             </a>
                                         </li>
                                         <li id="menu-item-3912" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3911">
-                                            <a href="{{ route('services') }}" class="show-demos">
+                                            <a href="{{ route('services') }}">
                                                 <span>Servicios</span>
                                             </a>
                                         </li>
                                         <li id="menu-item-3913" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3911">
-                                            <a href="{{ route('contact') }}" class="show-demos">
+                                            <a href="{{ route('contact') }}">
                                                 <span>Contáctenos</span>
+                                            </a>
+                                        </li>
+                                        <li id="menu-item-3914" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3911">
+                                            <a href="{{ route('index') }}" target="_blank">
+                                                <span>Administrador</span>
                                             </a>
                                         </li>
 {{--
@@ -601,13 +606,13 @@
                                     <div class="ct-header-holder ct-header-holder-mobile">
                                         <div class="ct-header-info-item ct-header-call">
                                             <div class="h-item-icon"><i class="flaticon-telephone text-gradient"></i></div>
-                                            <div class="h-item-meta"><label>Call Us: (210) 123-451</label> <span>(Sat - Thursday)</span></div>
-                                            <a href="tel:+12312143567" target="_blank" class="h-item-link"></a>
+                                            <div class="h-item-meta"><label>Llámanos: 51 {{ $main_phone->number }}</label> <span>(Sat - Thursday)</span></div>
+                                            <a href="https://api.whatsapp.com/send?phone=51{{ $main_phone->number }}" target="_blank" class="h-item-link"></a>
                                         </div>
                                         <div class="ct-header-info-item ct-header-mail">
                                             <div class="h-item-icon"><i class="flaticonv3-envelope text-gradient"></i></div>
-                                            <div class="h-item-meta"><label>Mail us for help:</label> <span>info@consultio.com</span></div>
-                                            <a href="mailto:info@consultio.com" target="_blank" class="h-item-link"></a>
+                                            <div class="h-item-meta"><label>Correo:</label> <span>{{ $main_email->email }}</span></div>
+                                            <a href="mailto:{{ $main_email->email }}" target="_blank" class="h-item-link"></a>
                                         </div>
                                         <div class="ct-header-info-item ct-header-address">
                                             <div class="h-item-icon"><i class="flaticon-map text-gradient"></i></div>
@@ -618,12 +623,13 @@
                                     <div class="ct-header-button-mobile"><a class="btn btn-default" href="../contact/index.htm" target="_self">Appionment</a></div>
                                 </div>
                             </nav>
-{{--
+
                             <div class="ct-header-meta">
+{{--
                                 <div class="header-right-item h-btn-search"><i class="fac fac-search"></i></div>
                                 <div class="header-right-item h-btn-cart"><i class="fac fac-shopping-basket"></i> <span class="widget_cart_counter_header">0</span></div>
-                            </div>
 --}}
+                            </div>
                         </div>
                     </div>
                     <div class="ct-header-button">

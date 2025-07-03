@@ -44,7 +44,6 @@
 
 
 
-        @yield('content')
         <div class="container">
             <div class="row">
             <div class="col-lg-6">
@@ -68,9 +67,13 @@
                                     <td>{{ $phone->main ? 'Si' : 'No' }}</td>
                                     <td>
                                         <div class="btn-group" role="group">
+                                            <button type="button" class="btn btn-info btn-sm edit-phone" data-bs-toggle="modal" data-bs-target="#exampleModal-phone" data="{{ $phone->number }}" value="{{ route('phone.update', $phone) }}"><i class="bi-pen"></i></button>
                                             @if($phone->main == 0)
                                             <a href="{{ route('phone.main', $phone) }}" class="btn btn-primary btn-sm" title="Principal"><i class="bi-star"></i> </a>
+                                            @else
+                                            <a class="btn btn-primary btn-sm disabled" role="button" aria-disabled="true"><i class="bi-star-fill"></i></a>
                                             @endif
+                                            <button type="button" class="btn btn-danger btn-sm swalDefaultSuccess" form="deleteall" formaction="{{ route('phone.destroy',$phone) }}" value="Teléfono: {{ $phone->number }}" title="Eliminar"><i class="bi-trash"></i></button>
                                         </div>
                                     </td>
                                 </tr>
@@ -127,9 +130,13 @@
                                     <td>{{ $email->main ? 'Si' : 'No' }}</td>
                                     <td>
                                         <div class="btn-group" role="group">
+                                            <button type="button" class="btn btn-info btn-sm edit-email" data-bs-toggle="modal" data-bs-target="#exampleModal-email" data="{{ $email->email }}" value="{{ route('email.update', $email) }}"><i class="bi-pen"></i></button>
                                             @if($email->main == 0)
                                             <a href="{{ route('email.main', $email) }}" class="btn btn-primary btn-sm" title="Principal"><i class="bi-star"></i> </a>
+                                            @else
+                                            <a class="btn btn-primary btn-sm disabled" role="button" aria-disabled="true"><i class="bi-star-fill"></i></a>
                                             @endif
+                                            <button type="button" class="btn btn-danger btn-sm swalDefaultSuccess" form="deleteall" formaction="{{ route('email.destroy',$email) }}" value="Correo: {{ $email->email }}" title="Eliminar"><i class="bi-trash"></i></button>
                                         </div>
                                     </td>
                                 </tr>
@@ -167,6 +174,51 @@
             </div>
             </div>
 
+
+            <form action="" method="POST" enctype="multipart/form-data" id="form-edit-phone">
+            <div class="modal fade" id="exampleModal-phone" tabindex="-1" aria-labelledby="exampleModalLabel-phone" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Editar telefono</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                                @csrf
+                                @method('PUT')
+                                <input type="tel" pattern="[0-9]{9}" name="number" class="form-control" id="phone" required>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                            <button type="submit" class="btn btn-primary">Guardar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </form>
+
+            <form action="" method="POST" enctype="multipart/form-data" id="form-edit-email">
+            <div class="modal fade" id="exampleModal-email" tabindex="-1" aria-labelledby="exampleModalLabel-email" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Editar correo</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                                @csrf
+                                @method('PUT')
+                                <input type="email" name="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                            <button type="submit" class="btn btn-primary">Guardar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </form>
+
         </div>
 
 
@@ -185,7 +237,39 @@
     });
     </script>
     @endif
-    @yield('javascript')
+    
+    <script type="text/javascript">
+        $('.edit-phone').click(function() {
+            $('#form-edit-phone').attr('action',$(this).val());
+            $('#phone').val($(this).attr('data'));
+        });
+
+        $('.edit-email').click(function() {
+            $('#form-edit-email').attr('action',$(this).val());
+            $('#email').val($(this).attr('data'));
+        });
+
+        $('.swalDefaultSuccess').click(function(){
+            Swal.fire({
+                title: '¿Esta seguro que desea eliminarlo?',
+                text: $(this).val(),
+                showDenyButton: true,
+                confirmButtonText: "Si, eliminar",
+                denyButtonText: "No, cancelar",
+                icon: "warning",
+                customClass: {
+                    confirmButton: 'btn btn-primary',
+                    denyButton: 'btn btn-danger'
+                }
+            }).then((result) => {
+                if(result.isConfirmed){
+                    $('#deleteall').attr('action', $(this).attr('formaction'));
+                    $('#deleteall').submit();
+                }
+            })
+        });
+
+    </script>
     
   </body>
 </html>

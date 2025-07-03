@@ -90,9 +90,6 @@ class AdminController extends Controller
     public function update_phone(Request $request, Phone $phone)
     {
         $phone->number = $request->input('number');
-        $phone->main = $request->input('main');
-        if($request->input('main') == '1')
-            Phone::query()->update(['main' => 0]);
         $phone->save();
 
         return redirect(route('index'))->with('success', 'Número editado');
@@ -112,9 +109,6 @@ class AdminController extends Controller
     public function update_email(Request $request, Email $email)
     {
         $email->email = $request->input('email');
-        $email->main = $request->input('main');
-        if($request->input('main') == '1')
-            Email::query()->update(['main' => 0]);
         $email->save();
 
         return redirect(route('index'))->with('success', 'Correo editado');
