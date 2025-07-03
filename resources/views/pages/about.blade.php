@@ -78,7 +78,7 @@ About &#8211; Consultio
 <div id="pagetitle" class="page-title bg-image text-center">
     <div class="container">
         <div class="page-title-inner">
-            <div class="page-title-holder"><h1 class="page-title">About us</h1></div>
+            <div class="page-title-holder"><h1 class="page-title">Acerca de Nosotros</h1></div>
             <ul class="ct-breadcrumb">
                 <li><a class="breadcrumb-entry" href="../index.htm">Home</a></li>
                 <li><span class="breadcrumb-entry">About</span></li>

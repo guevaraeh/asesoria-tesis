@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\ClientController;
 
 Route::get('/', function () {
@@ -9,11 +10,10 @@ Route::get('/', function () {
 });
 
 Route::get('/acerca-de-nosotros', [ClientController::class, 'about'])->name('about');
-
 Route::get('/contacto', [ClientController::class, 'contact'])->name('contact');
-
 Route::get('/servicios', [ClientController::class, 'services'])->name('services');
-
+Route::get('/enviar', [ClientController::class, 'sendEmail'])->name('email');
+Route::post('/envio-contacto', [ClientController::class, 'contact_email'])->name('contact.email');
 
 Route::get('/admin', [AdminController::class, 'index'])->name('index');
 
@@ -28,3 +28,7 @@ Route::get('/admin/main-email/{email}', [AdminController::class, 'main_email'])-
 
 Route::delete('/admin/phone/{phone}/destroy', [AdminController::class, 'destroy_phone'])->name('phone.destroy');
 Route::delete('/admin/email/{email}/destroy', [AdminController::class, 'destroy_email'])->name('email.destroy');
+
+Route::post('/admin/service/store', [ServiceController::class, 'store'])->name('service.store');
+Route::put('/admin/service/{service}/update', [ServiceController::class, 'update'])->name('service.update');
+Route::delete('/admin/service/{service}/destroy', [ServiceController::class, 'destroy'])->name('service.destroy');

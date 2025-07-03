@@ -75,7 +75,7 @@ Contact v.2 &#8211; Consultio
 <div id="pagetitle" class="page-title bg-image text-center">
     <div class="container">
         <div class="page-title-inner">
-            <div class="page-title-holder"><h1 class="page-title">Contact</h1></div>
+            <div class="page-title-holder"><h1 class="page-title">Contáctenos</h1></div>
             <ul class="ct-breadcrumb">
                 <li><a class="breadcrumb-entry" href="../index.htm">Home</a></li>
                 <li><span class="breadcrumb-entry">Contact v.2</span></li>
@@ -125,7 +125,7 @@ Contact v.2 &#8211; Consultio
 "
                                                                                     ></div>
                                                                                     <h3 class="item--title st-line-left1 wow wow fadeInLeft" data-wow-delay="ms">
-                                                                                        <span class="sp-main"> <i></i> Get in touch for any kind of help and informations </span>
+                                                                                        <span class="sp-main"> <i></i> Póngase en contacto con nosotros para cualquier tipo de ayuda e información. </span>
                                                                                     </h3>
                                                                                 </div>
                                                                             </div>
@@ -142,7 +142,7 @@ Contact v.2 &#8211; Consultio
                                                                         data-widget_type="text-editor.default"
                                                                     >
                                                                         <div class="elementor-widget-container">
-                                                                            We’re glad to discuss your organisation’s situation. So please contact us via the details below, or enter your request.
+                                                                            Nos complace hablar sobre su situación. Contáctenos a través de los datos a continuación o envíe su solicitud.
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -167,7 +167,7 @@ Contact v.2 &#8211; Consultio
                                                                             <div class="ct-fancy-box ct-fancy-box-layout3 style1 wow fadeInUp" data-wow-delay="ms">
                                                                                 <div class="item--icon"><i aria-hidden="true" class="fas fa-map-marker-alt"></i></div>
                                                                                 <div class="item--holder">
-                                                                                    <h3 class="item--title">Our head office address:</h3>
+                                                                                    <h3 class="item--title">Dirección de nuestra oficina central:</h3>
                                                                                     <div class="item--description">3556 Hartford Way Vlg, Mount Pleasant, SC, 29466, Australia.</div>
                                                                                 </div>
                                                                             </div>
@@ -241,13 +241,14 @@ Contact v.2 &#8211; Consultio
                                                                                                 <ul></ul>
                                                                                             </div>
                                                                                             <form
-                                                                                                action="/consultio-digital-marketing/contact-v-2/#wpcf7-f5003-p3510-o1"
-                                                                                                method="post"
+                                                                                                action="{{ route('contact.email') }}"
+                                                                                                method="POST"
                                                                                                 class="wpcf7-form init"
                                                                                                 aria-label="Contact form"
                                                                                                 novalidate="novalidate"
                                                                                                 data-status="init"
                                                                                             >
+                                                                                                @csrf
                                                                                                 <div style="display: none;">
                                                                                                     <input type="hidden" name="_wpcf7" value="5003" /> <input type="hidden" name="_wpcf7_version" value="6.0" />
                                                                                                     <input type="hidden" name="_wpcf7_locale" value="en_US" />
@@ -265,7 +266,7 @@ Contact v.2 &#8211; Consultio
                                                                                                                     class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
                                                                                                                     aria-required="true"
                                                                                                                     aria-invalid="false"
-                                                                                                                    placeholder="First name *"
+                                                                                                                    placeholder="Nombres *"
                                                                                                                     value=""
                                                                                                                     type="text"
                                                                                                                     name="first-name"
@@ -282,7 +283,7 @@ Contact v.2 &#8211; Consultio
                                                                                                                     class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
                                                                                                                     aria-required="true"
                                                                                                                     aria-invalid="false"
-                                                                                                                    placeholder="Last name *"
+                                                                                                                    placeholder="Apellidos *"
                                                                                                                     value=""
                                                                                                                     type="text"
                                                                                                                     name="last-name"
@@ -301,7 +302,7 @@ Contact v.2 &#8211; Consultio
                                                                                                                     class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email"
                                                                                                                     aria-required="true"
                                                                                                                     aria-invalid="false"
-                                                                                                                    placeholder="Your mail *"
+                                                                                                                    placeholder="Correo electrónico *"
                                                                                                                     value=""
                                                                                                                     type="email"
                                                                                                                     name="your-email"
@@ -318,7 +319,7 @@ Contact v.2 &#8211; Consultio
                                                                                                                     class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
                                                                                                                     aria-required="true"
                                                                                                                     aria-invalid="false"
-                                                                                                                    placeholder="Phone number *"
+                                                                                                                    placeholder="Número de Teléfono *"
                                                                                                                     value=""
                                                                                                                     type="text"
                                                                                                                     name="your-phone"
@@ -327,6 +328,7 @@ Contact v.2 &#8211; Consultio
                                                                                                         </p>
                                                                                                     </div>
                                                                                                 </div>
+{{--
                                                                                                 <div class="row">
                                                                                                     <div class="input-filled col-lg-6 col-md-6">
                                                                                                         <p>
@@ -337,7 +339,7 @@ Contact v.2 &#8211; Consultio
                                                                                                                     class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
                                                                                                                     aria-required="true"
                                                                                                                     aria-invalid="false"
-                                                                                                                    placeholder="Web address *"
+                                                                                                                    placeholder="Dirección Web *"
                                                                                                                     value=""
                                                                                                                     type="text"
                                                                                                                     name="your-web-address"
@@ -363,6 +365,10 @@ Contact v.2 &#8211; Consultio
                                                                                                         </p>
                                                                                                     </div>
                                                                                                 </div>
+--}}
+                                                                                                <input type="hidden" name="your-web-address" value="no pagina"/>
+                                                                                                <input type="hidden" name="your-service" value="Services"/>
+
                                                                                                 <div class="row">
                                                                                                     <div class="input-filled col-12">
                                                                                                         <p>
@@ -374,7 +380,7 @@ Contact v.2 &#8211; Consultio
                                                                                                                     class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required"
                                                                                                                     aria-required="true"
                                                                                                                     aria-invalid="false"
-                                                                                                                    placeholder="Message..."
+                                                                                                                    placeholder="Mensaje..."
                                                                                                                     name="your-message"
                                                                                                                 ></textarea>
                                                                                                             </span>
@@ -383,7 +389,7 @@ Contact v.2 &#8211; Consultio
                                                                                                     <div class="input-filled col-12">
                                                                                                         <p>
                                                                                                             <button type="submit" class="wpcf7-submit btn btn-block hover-white">
-                                                                                                                <i class="fac fac-arrow-circle-right space-right"></i>Send now
+                                                                                                                <i class="fac fac-arrow-circle-right space-right"></i>Enviar
                                                                                                             </button>
                                                                                                         </p>
                                                                                                     </div>

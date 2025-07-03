@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Phone;
 use App\Models\Email;
+use App\Models\Service;
 
 use Illuminate\Http\Request;
 
@@ -16,8 +17,9 @@ class AdminController extends Controller
     {
         $phones = Phone::get();
         $emails = Email::get();
+        $services = Service::get();
 
-        return view('admin.app',['phones' => $phones, 'emails' => $emails]);
+        return view('admin.app',['phones' => $phones, 'emails' => $emails, 'services' => $services]);
     }
 
     /**

@@ -75,7 +75,7 @@ Services v.1 &#8211; Consultio
 <div id="pagetitle" class="page-title bg-image text-center">
     <div class="container">
         <div class="page-title-inner">
-            <div class="page-title-holder"><h1 class="page-title">Services</h1></div>
+            <div class="page-title-holder"><h1 class="page-title">Servicios</h1></div>
             <ul class="ct-breadcrumb">
                 <li><a class="breadcrumb-entry" href="../index.htm">Home</a></li>
                 <li><span class="breadcrumb-entry">Services v.1</span></li>
@@ -520,3 +520,39 @@ Services v.1 &#8211; Consultio
 
 @section('down')
 @endsection
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{{--
+@section('title')
+Services &#8211; Consultio
+@endsection
+
+@section('up')
+@endsection
+
+@section('content')
+@endsection
+--}}
