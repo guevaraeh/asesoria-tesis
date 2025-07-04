@@ -1,7 +1,7 @@
 <!-- https://codeformater.com/es/ -->
 
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="es">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -503,7 +503,9 @@
         <link rel="stylesheet" id="oc-css-css" href="{{ asset('libraries/wp-content/plugins/case-theme-core/assets/css/lib/owl.carousel.min.css') }}?ver=2.2.1" type="text/css" media="all" />
         <link rel="stylesheet" id="ct-slick-css-css" href="{{ asset('libraries/wp-content/plugins/case-theme-core/assets/css/lib/ct-slick-css.min.css') }}?ver=1.0.0" type="text/css" media="all" />
         <link rel="stylesheet" id="ct-font-awesome-css" href="{{ asset('libraries/wp-content/plugins/case-theme-core/assets/plugin/font-awesome/css/font-awesome.min.css') }}?ver=4.7.0" type="text/css" media="all" />
+{{--
         <link rel="stylesheet" id="contact-form-7-css" href="{{ asset('libraries/wp-content/plugins/contact-form-7/includes/css/contact-form-7.min.css') }}?ver=6.0" type="text/css" media="all" />
+--}}
         <link rel="stylesheet" id="purchase-link-css-css" href="{{ asset('libraries/wp-content/plugins/envato-purchase-link/css/purchase-link-css.min.css') }}?ver=1.0.0" type="text/css" media="all" />
         <link rel="stylesheet" id="woocommerce-layout-css" href="{{ asset('libraries/wp-content/plugins/woocommerce/assets/css/woocommerce-layout.min.css') }}?ver=9.3.3" type="text/css" media="all" />
         <link rel="stylesheet" id="woocommerce-smallscreen-css" href="{{ asset('libraries/wp-content/plugins/woocommerce/assets/css/woocommerce-smallscreen.min.css') }}?ver=9.3.3" type="text/css" media="only screen and (max-width: 768px)" />
@@ -591,6 +593,7 @@
             }
         </style>
         <link rel="stylesheet" id="consultio-style-css" href="{{ asset('libraries/wp-content/themes/csuti/consultio-style.min.css') }}?ver=6.8.1" type="text/css" media="all" />
+{{--
         <link
             rel="stylesheet"
             id="consultio-google-fonts-css"
@@ -598,7 +601,7 @@
             type="text/css"
             media="all"
         />
-
+--}}
 
 
 
@@ -623,13 +626,7 @@
         <link rel="stylesheet" id="widget-text-editor-css" href="{{ asset('libraries/wp-content/plugins/elementor/assets/css/widget-text-editor.min.css') }}?ver=3.25.4" type="text/css" media="all" />
         <link rel="stylesheet" id="widget-image-css" href="{{ asset('libraries/wp-content/plugins/elementor/assets/css/widget-image.min.css') }}?ver=3.25.4" type="text/css" media="all" />
         <link rel="stylesheet" id="elementor-post-26-css" href="{{ asset('libraries/wp-content/uploads/elementor/css/post-26.css') }}?ver=1729686440" type="text/css" media="all" />
-        <link
-            rel="stylesheet"
-            id="google-fonts-1-css"
-            href="{{ asset('libraries/ct-css/css-1') }}?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;display=auto&#038;ver=6.8.1"
-            type="text/css"
-            media="all"
-        />
+
         <link rel="stylesheet" id="elementor-icons-shared-0-css" href="{{ asset('libraries/wp-content/plugins/elementor/assets/lib/font-awesome/css/fontawesome.min.css') }}?ver=5.15.3" type="text/css" media="all" />
         <link rel="stylesheet" id="elementor-icons-fa-solid-css" href="{{ asset('libraries/wp-content/plugins/elementor/assets/lib/font-awesome/css/solid.min.css') }}?ver=5.15.3" type="text/css" media="all" />
         <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
@@ -1166,6 +1163,7 @@
             /* ]]> */
         </script>
         <script type="text/javascript" src="{{ asset('libraries/wp-content/uploads/siteground-optimizer-assets/swv.min.js') }}?ver=6.0" id="swv-js"></script>
+{{--
         <script type="text/javascript" id="contact-form-7-js-before">
             /* <![CDATA[ */
             var wpcf7 = {
@@ -1177,6 +1175,7 @@
             /* ]]> */
         </script>
         <script type="text/javascript" src="{{ asset('libraries/wp-content/uploads/siteground-optimizer-assets/contact-form-7.min.js') }}?ver=6.0" id="contact-form-7-js"></script>
+--}}
         <script type="text/javascript" src="{{ asset('libraries/wp-content/plugins/revslider/public/assets/js/rbtools.min.js') }}?ver=6.6.20" defer async id="tp-tools-js"></script>
         <script type="text/javascript" src="{{ asset('libraries/wp-content/plugins/revslider/public/assets/js/rs6.min.js') }}?ver=6.6.20" defer async id="revmin-js"></script>
         <script type="text/javascript" id="yith-wcqv-frontend-js-extra">

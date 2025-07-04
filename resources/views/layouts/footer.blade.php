@@ -35,7 +35,7 @@
                                                                             data-css="
 "
                                                                         ></div>
-                                                                        <h3 class="item--title st-default case-animate-time" data-wow-delay="ms"><span class="sp-main"> Get started to make easy! </span></h3>
+                                                                        <h3 class="item--title st-default case-animate-time" data-wow-delay="ms"><span class="sp-main"> ¡Empieza a hacerlo fácil! </span></h3>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -54,9 +54,9 @@
 "
                                                                     ></div>
                                                                     <span class="ct-icon-active"></span>
-                                                                    <a href="../contact-v-2/index.htm" class="btn btn-half-circle1 icon-active btn-inline-block wow fadeInLeft" data-wow-delay="ms">
+                                                                    <a href="{{ route('contact') }}" class="btn btn-half-circle1 icon-active btn-inline-block wow fadeInLeft" data-wow-delay="ms">
                                                                         <span class="ct-button-icon ct-align-icon-left"> <i aria-hidden="true" class="flaticonv2 flaticonv2-right-arrow"></i> </span>
-                                                                        <span class="ct-button-text">Contact us</span>
+                                                                        <span class="ct-button-text">Contáctenos</span>
                                                                     </a>
                                                                 </div>
                                                             </div>
@@ -75,9 +75,9 @@
 "
                                                                     ></div>
                                                                     <span class="ct-icon-active"></span>
-                                                                    <a href="index.htm" class="btn line-white2 icon-active btn-inline-block wow fadeInRight" data-wow-delay="ms">
+                                                                    <a href="{{ route('about') }}" class="btn line-white2 icon-active btn-inline-block wow fadeInRight" data-wow-delay="ms">
                                                                         <span class="ct-button-icon ct-align-icon-right"> <i aria-hidden="true" class="flaticonv2 flaticonv2-right-arrow"></i> </span>
-                                                                        <span class="ct-button-text">About us</span>
+                                                                        <span class="ct-button-text">Acerca de nosotros</span>
                                                                     </a>
                                                                 </div>
                                                             </div>
@@ -147,6 +147,7 @@
                                         </div>
                                     </div>
                                 </div>
+{{--
                                 <div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-4d62e194" data-id="4d62e194" data-element_type="column">
                                     <div class="elementor-widget-wrap elementor-element-populated">
                                         <div class="elementor-element elementor-element-ec7fe7f elementor-widget elementor-widget-ct_heading" data-id="ec7fe7f" data-element_type="widget" data-widget_type="ct_heading.default">
@@ -234,6 +235,7 @@
                                         </div>
                                     </div>
                                 </div>
+--}}
                                 <div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-109a859b" data-id="109a859b" data-element_type="column">
                                     <div class="elementor-widget-wrap elementor-element-populated">
                                         <div class="elementor-element elementor-element-9f425fd elementor-widget elementor-widget-ct_heading" data-id="9f425fd" data-element_type="widget" data-widget_type="ct_heading.default">

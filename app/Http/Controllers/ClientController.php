@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Phone;
 use App\Models\Email;
+use App\Models\Service;
 
 use Illuminate\Support\Facades\Mail;
 use App\Mail\ContactEmail;
@@ -14,7 +15,10 @@ class ClientController extends Controller
 {
     public function index()
     {
-        
+        $main_phone = Phone::where('main',1)->first();
+        $main_email = Email::where('main',1)->first();
+
+        return view('pages.main', ['main_phone' => $main_phone, 'main_email' => $main_email]);
     }
 
     public function about()
@@ -41,7 +45,9 @@ class ClientController extends Controller
         $main_phone = Phone::where('main',1)->first();
         $main_email = Email::where('main',1)->first();
 
-        return view('pages.services', ['main_phone' => $main_phone, 'main_email' => $main_email]);
+        $services = Service::get();
+
+        return view('pages.services', ['main_phone' => $main_phone, 'main_email' => $main_email, 'services' => $services]);
     }
 
     public function sendEmail()
@@ -58,14 +64,27 @@ class ClientController extends Controller
 
     public function contact_email(Request $request)
     {
-        dd($request->collect());
+        /*"first-name" => "Elard"
+        "last-name" => "Guevara"
+        "your-email" => "guevara.eh@gmail.com"
+        "your-phone" => "951677400"
+        "your-message" => "mensaje"*/
+        //dd($request->collect());
+        
         $data = [
-            'name' => 'John Doe',
-            'message' => 'This is a test email from Laravel 12.'
+            'name' => $request->input('last-name') . ' ' . $request->input('first-name'),
+            'message' => $request->input('your-message'),
         ];
 
-        Mail::to('guevara.eh@gmail.com')->send(new ContactEmail($data));
+        /*Mail::to('guevara.eh@gmail.com')->send(new ContactEmail($data));
 
-        return response()->json(['success' => 'Email sent successfully.']);
+        return redirect(route('contact'))->with('success', 'Enviado');*/
+
+        try {
+            Mail::to('guevara.eh@gmail.com')->send(new ContactEmail($data));
+            return redirect(route('contact'))->with('success', 'Enviado');
+        } catch (\Exception $e) {
+            return redirect(route('contact'))->with('error', 'No enviado');
+        }
     }
 }

@@ -5,10 +5,12 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\ClientController;
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
-});
+});*/
 
+
+Route::get('/', [ClientController::class, 'index'])->name('welcome');
 Route::get('/acerca-de-nosotros', [ClientController::class, 'about'])->name('about');
 Route::get('/contacto', [ClientController::class, 'contact'])->name('contact');
 Route::get('/servicios', [ClientController::class, 'services'])->name('services');

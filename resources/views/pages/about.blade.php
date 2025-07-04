@@ -16,6 +16,7 @@ About &#8211; Consultio
 <link rel="stylesheet" id="widget-text-editor-css" href="{{ asset('libraries/wp-content/plugins/elementor/assets/css/widget-text-editor.min.css') }}?ver=3.25.4" type="text/css" media="all" />
 <link rel="stylesheet" id="widget-image-css" href="{{ asset('libraries/wp-content/plugins/elementor/assets/css/widget-image.min.css') }}?ver=3.25.4" type="text/css" media="all" />
 <link rel="stylesheet" id="elementor-post-26-css" href="{{ asset('libraries/wp-content/uploads/elementor/css/post-26.css') }}?ver=1729686440" type="text/css" media="all" />
+{{--
 <link
     rel="stylesheet"
     id="google-fonts-1-css"
@@ -23,6 +24,7 @@ About &#8211; Consultio
     type="text/css"
     media="all"
 />
+--}}
 <link rel="stylesheet" id="elementor-icons-shared-0-css" href="{{ asset('libraries/wp-content/plugins/elementor/assets/lib/font-awesome/css/fontawesome.min.css') }}?ver=5.15.3" type="text/css" media="all" />
 <link rel="stylesheet" id="elementor-icons-fa-solid-css" href="{{ asset('libraries/wp-content/plugins/elementor/assets/lib/font-awesome/css/solid.min.css') }}?ver=5.15.3" type="text/css" media="all" />
 <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
@@ -276,9 +278,9 @@ About &#8211; Consultio
                                                     >
                                                         <div class="elementor-widget-container">
                                                             <div class="ct-cta1">
-                                                                <div class="item--holder"><span class="item--title">Want to know more about us?</span> <span class="item--desc">Just download brochure...</span></div>
+                                                                <div class="item--holder"><span class="item--title">¿Quieres saber más sobre nosotros?</span> <span class="item--desc">Descarga el CV...</span></div>
                                                                 <div class="item--button">
-                                                                    <a class="btn btn-white" href="#"> <i aria-hidden="true" class="fas fa-cloud-download-alt"></i> Download Brochure </a>
+                                                                    <a class="btn btn-white" href="#"> <i aria-hidden="true" class="fas fa-cloud-download-alt"></i> Descargar </a>
                                                                 </div>
                                                             </div>
                                                         </div>

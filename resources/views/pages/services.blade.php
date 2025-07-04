@@ -1,5 +1,6 @@
 @extends('layouts.app')
 
+{{--
 @section('title')
 Services v.1 &#8211; Consultio
 @endsection
@@ -15,13 +16,7 @@ Services v.1 &#8211; Consultio
 <link rel="stylesheet" id="sbistyles-css" href="{{ asset('libraries/wp-content/plugins/instagram-feed/css/sbi-styles.min.css') }}?ver=6.6.0" type="text/css" media="all" />
 <link rel="stylesheet" id="widget-text-editor-css" href="{{ asset('libraries/wp-content/plugins/elementor/assets/css/widget-text-editor.min.css') }}?ver=3.25.4" type="text/css" media="all" />
 <link rel="stylesheet" id="elementor-post-407-css" href="{{ asset('libraries/wp-content/uploads/elementor/css/post-407.css') }}?ver=1729683959" type="text/css" media="all" />
-<link
-    rel="stylesheet"
-    id="google-fonts-1-css"
-    href="../../css-1?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;display=auto&#038;ver=6.8.1"
-    type="text/css"
-    media="all"
-/>
+
 <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
 <script type="text/javascript" src="{{ asset('libraries/wp-includes/js/jquery/jquery.min.js') }}?ver=3.7.1" id="jquery-core-js"></script>
 <script type="text/javascript" src="{{ asset('libraries/wp-includes/js/jquery/jquery-migrate.min.js') }}?ver=3.4.1" id="jquery-migrate-js"></script>
@@ -520,6 +515,7 @@ Services v.1 &#8211; Consultio
 
 @section('down')
 @endsection
+--}}
 
 
 
@@ -545,14 +541,256 @@ Services v.1 &#8211; Consultio
 
 
 
-{{--
 @section('title')
 Services &#8211; Consultio
 @endsection
 
 @section('up')
+<link rel="stylesheet" id="consultio-style-css" href="{{ asset('libraries/wp-content/themes/csuti/consultio-style.min.css') }}?ver=6.8.1" type="text/css" media="all" />
+<link
+    rel="stylesheet"
+    id="consultio-google-fonts-css"
+    href="../../css?family=Roboto%3A300%2C400%2C400i%2C500%2C500i%2C600%2C600i%2C700%2C700i%7CPoppins%3A300%2C400%2C400i%2C500%2C500i%2C600%2C600i%2C700%2C700i%7CPlayfair+Display%3A400%2C400i%2C700%2C700i%2C800%2C900%7CMuli%3A400%7CLato%3A400%7CBarlow%3A400%2C700%7CNunito+Sans%3A400%2C600%2C700%2C900%7CKalam%3A400%7CRubik%3A400%7CInter%3A400%2C500%2C600%2C700&#038;subset=latin%2Clatin-ext&#038;ver=6.8.1"
+    type="text/css"
+    media="all"
+/>
+<link rel="stylesheet" id="meks-flickr-widget-css" href="{{ asset('libraries/wp-content/plugins/meks-simple-flickr-widget/css/meks-flickr-widget.min.css') }}?ver=1.3" type="text/css" media="all" />
+<link rel="stylesheet" id="newsletter-css" href="{{ asset('libraries/wp-content/plugins/newsletter/newsletter.min.css') }}?ver=8.6.0" type="text/css" media="all" />
+<script type="text/javascript" src="{{ asset('libraries/wp-includes/js/jquery/jquery.min.js') }}?ver=3.7.1" id="jquery-core-js"></script>
+<script type="text/javascript" src="{{ asset('libraries/wp-includes/js/jquery/jquery-migrate.min.js') }}?ver=3.4.1" id="jquery-migrate-js"></script>
+<script type="text/javascript" src="{{ asset('libraries/wp-content/plugins/case-theme-core/assets/js/lib/waypoints.min.js') }}?ver=2.0.5" id="waypoints-js"></script>
+<script type="text/javascript" src="{{ asset('libraries/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js') }}?ver=2.7.0-wc.9.3.3" id="jquery-blockui-js" defer="defer" data-wp-strategy="defer"></script>
+<script type="text/javascript" id="wc-add-to-cart-js-extra">
+    /* <![CDATA[ */
+    var wc_add_to_cart_params = {
+        ajax_url: "\/consultio-digital-marketing\/wp-admin\/admin-ajax.php",
+        wc_ajax_url: "\/consultio-digital-marketing\/?wc-ajax=%%endpoint%%",
+        i18n_view_cart: "View cart",
+        cart_url: "https:\/\/demo.casethemes.net\/consultio-digital-marketing\/cart\/",
+        is_cart: "",
+        cart_redirect_after_add: "no",
+    };
+    /* ]]> */
+</script>
+<script type="text/javascript" src="{{ asset('libraries/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min.js') }}?ver=9.3.3" id="wc-add-to-cart-js" defer="defer" data-wp-strategy="defer"></script>
+<script type="text/javascript" src="{{ asset('libraries/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js') }}?ver=2.1.4-wc.9.3.3" id="js-cookie-js" defer="defer" data-wp-strategy="defer"></script>
+<script type="text/javascript" id="woocommerce-js-extra">
+    /* <![CDATA[ */
+    var woocommerce_params = { ajax_url: "\/consultio-digital-marketing\/wp-admin\/admin-ajax.php", wc_ajax_url: "\/consultio-digital-marketing\/?wc-ajax=%%endpoint%%" };
+    /* ]]> */
+</script>
+<script type="text/javascript" src="{{ asset('libraries/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js') }}?ver=9.3.3" id="woocommerce-js" defer="defer" data-wp-strategy="defer"></script>
+<script type="text/javascript" src="{{ asset('libraries/wp-content/uploads/siteground-optimizer-assets/ct-inline-css-js.min.js') }}?ver=3.2.1" id="ct-inline-css-js-js"></script>
+<link rel="https://api.w.org/" href="{{ asset('libraries/wp-json/index.htm') }}" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://demo.casethemes.net/consultio-digital-marketing/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 6.8.1" />
+<meta name="generator" content="WooCommerce 9.3.3" />
+<meta name="generator" content="Redux 4.5.0" />
+<noscript>
+    <style>
+        .woocommerce-product-gallery {
+            opacity: 1 !important;
+        }
+    </style>
+</noscript>
 @endsection
 
 @section('content')
+<div id="pagetitle" class="page-title bg-image text-center">
+    <div class="container">
+        <div class="page-title-inner">
+            <div class="page-title-holder"><h1 class="page-title">Servicios</h1></div>
+            <ul class="ct-breadcrumb">
+                <li><a class="breadcrumb-entry" href="../index.htm">Home</a></li>
+                <li><span class="breadcrumb-entry">Services</span></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div id="content" class="site-content">
+    <div class="content-inner">
+        <div class="container content-container">
+            <div class="row content-row">
+                <div id="primary" class="col-12">
+                    <main id="main" class="site-main">
+                        <br>
+                        @foreach($services as $service)
+                        <article id="post-4177" class="single-hentry archive post-4177 service type-service status-publish hentry service-category-business">
+                            <div class="entry-body">
+                                <div class="entry-holder">
+                                    <h2 class="entry-title"><a href="#"> {{ $service->title }} </a></h2>
+                                    <ul class="entry-meta">
+                                        <li class="item-date"><i class="fac fac-calendar-alt"></i>21 Mar, 2020</li>
+                                        <li class="item-author"><i class="fac fac-user"></i><a href="../author/admin/index.htm" title="Posts by Rinnah" rel="author">Rinnah</a></li>
+                                        <li class="item-comment"><i class="fac fac-comments"></i><a href="business-planning-2/index.htm">No Comments</a></li>
+                                    </ul>
+                                    <div class="entry-excerpt">
+                                        {{ $service->content }}
+                                    </div>
+                                    <div class="entry-readmore">
+                                        <a href="#" class="btn-text text-gradient"> <i class="fac fac-angle-right"></i> <span>Read More</span> </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        @endforeach
+
+                        <article id="post-4177" class="single-hentry archive post-4177 service type-service status-publish hentry service-category-business">
+                            <div class="entry-body">
+                                <div class="entry-holder">
+                                    <h2 class="entry-title"><a href="business-planning-2/index.htm"> Business Planning </a></h2>
+                                    <ul class="entry-meta">
+                                        <li class="item-date"><i class="fac fac-calendar-alt"></i>21 Mar, 2020</li>
+                                        <li class="item-author"><i class="fac fac-user"></i><a href="../author/admin/index.htm" title="Posts by Rinnah" rel="author">Rinnah</a></li>
+                                        <li class="item-comment"><i class="fac fac-comments"></i><a href="business-planning-2/index.htm">No Comments</a></li>
+                                    </ul>
+                                    <div class="entry-excerpt">
+                                        We give the best Services There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words
+                                        which don&#8217;t look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to&hellip;
+                                    </div>
+                                    <div class="entry-readmore">
+                                        <a href="business-planning-2/index.htm" class="btn-text text-gradient"> <i class="fac fac-angle-right"></i> <span>Read More</span> </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <!-- #post -->
+                        <article id="post-4174" class="single-hentry archive post-4174 service type-service status-publish hentry service-category-business">
+                            <div class="entry-body">
+                                <div class="entry-holder">
+                                    <h2 class="entry-title"><a href="brand-package/index.htm"> Brand &#038; Package </a></h2>
+                                    <ul class="entry-meta">
+                                        <li class="item-date"><i class="fac fac-calendar-alt"></i>21 Mar, 2020</li>
+                                        <li class="item-author"><i class="fac fac-user"></i><a href="../author/admin/index.htm" title="Posts by Rinnah" rel="author">Rinnah</a></li>
+                                        <li class="item-comment"><i class="fac fac-comments"></i><a href="brand-package/index.htm">No Comments</a></li>
+                                    </ul>
+                                    <div class="entry-excerpt">
+                                        We give the best Services There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words
+                                        which don&#8217;t look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to&hellip;
+                                    </div>
+                                    <div class="entry-readmore">
+                                        <a href="brand-package/index.htm" class="btn-text text-gradient"> <i class="fac fac-angle-right"></i> <span>Read More</span> </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <!-- #post -->
+                        <article id="post-4171" class="single-hentry archive post-4171 service type-service status-publish hentry service-category-business">
+                            <div class="entry-body">
+                                <div class="entry-holder">
+                                    <h2 class="entry-title"><a href="web-desiging/index.htm"> Web Desiging </a></h2>
+                                    <ul class="entry-meta">
+                                        <li class="item-date"><i class="fac fac-calendar-alt"></i>21 Mar, 2020</li>
+                                        <li class="item-author"><i class="fac fac-user"></i><a href="../author/admin/index.htm" title="Posts by Rinnah" rel="author">Rinnah</a></li>
+                                        <li class="item-comment"><i class="fac fac-comments"></i><a href="web-desiging/index.htm">No Comments</a></li>
+                                    </ul>
+                                    <div class="entry-excerpt">
+                                        We give the best Services There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words
+                                        which don&#8217;t look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to&hellip;
+                                    </div>
+                                    <div class="entry-readmore">
+                                        <a href="web-desiging/index.htm" class="btn-text text-gradient"> <i class="fac fac-angle-right"></i> <span>Read More</span> </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <!-- #post -->
+                        <article id="post-448" class="single-hentry archive post-448 service type-service status-publish has-post-thumbnail hentry service-category-digital">
+                            <div class="entry-featured">
+                                <a href="social-media-marketing/index.htm" style="background-image: url({{ asset('libraries/wp-content/uploads/2020/03/update-service-01.jpg') }});">
+                                    <img
+                                        width="1200"
+                                        height="800"
+                                        src="{{ asset('libraries/wp-content/uploads/2020/03/update-service-01.jpg') }}"
+                                        class="attachment-full size-full wp-post-image"
+                                        alt=""
+                                        decoding="async"
+                                        srcset="
+                                            {{ asset('libraries/wp-content/uploads/2020/03/update-service-01.jpg') }}          1200w,
+                                            {{ asset('libraries/wp-content/uploads/2020/03/update-service-01-300x200.jpg') }}   300w,
+                                            {{ asset('libraries/wp-content/uploads/2020/03/update-service-01-1024x683.jpg') }} 1024w,
+                                            {{ asset('libraries/wp-content/uploads/2020/03/update-service-01-768x512.jpg') }}   768w,
+                                            {{ asset('libraries/wp-content/uploads/2020/03/update-service-01-600x400.jpg') }}   600w
+                                        "
+                                        sizes="(max-width: 1200px) 100vw, 1200px"
+                                        loading="eager"
+                                    />
+                                </a>
+                                <div class="entry-date"><span>11</span> <span>Mar 20</span></div>
+                            </div>
+                            <div class="entry-body">
+                                <div class="entry-holder">
+                                    <h2 class="entry-title"><a href="social-media-marketing/index.htm"> Social Media Marketing </a></h2>
+                                    <ul class="entry-meta">
+                                        <li class="item-author"><i class="fac fac-user"></i><a href="../author/admin/index.htm" title="Posts by Rinnah" rel="author">Rinnah</a></li>
+                                        <li class="item-comment"><i class="fac fac-comments"></i><a href="social-media-marketing/index.htm">No Comments</a></li>
+                                    </ul>
+                                    <div class="entry-excerpt">
+                                        We give the best Services There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words
+                                        which don&#8217;t look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to&hellip;
+                                    </div>
+                                    <div class="entry-readmore">
+                                        <a href="social-media-marketing/index.htm" class="btn-text text-gradient"> <i class="fac fac-angle-right"></i> <span>Read More</span> </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <!-- #post -->
+                        <article id="post-446" class="single-hentry archive post-446 service type-service status-publish has-post-thumbnail hentry service-category-digital">
+                            <div class="entry-featured">
+                                <a href="content-marketing/index.htm" style="background-image: url({{ asset('libraries/wp-content/uploads/2020/03/update-service-02.jpg') }});">
+                                    <img
+                                        width="1200"
+                                        height="800"
+                                        src="{{ asset('libraries/wp-content/uploads/2020/03/update-service-02.jpg') }}"
+                                        class="attachment-full size-full wp-post-image"
+                                        alt=""
+                                        decoding="async"
+                                        srcset="
+                                            {{ asset('libraries/wp-content/uploads/2020/03/update-service-02.jpg') }}          1200w,
+                                            {{ asset('libraries/wp-content/uploads/2020/03/update-service-02-300x200.jpg') }}   300w,
+                                            {{ asset('libraries/wp-content/uploads/2020/03/update-service-02-1024x683.jpg') }} 1024w,
+                                            {{ asset('libraries/wp-content/uploads/2020/03/update-service-02-768x512.jpg') }}   768w,
+                                            {{ asset('libraries/wp-content/uploads/2020/03/update-service-02-600x400.jpg') }}   600w
+                                        "
+                                        sizes="(max-width: 1200px) 100vw, 1200px"
+                                        loading="eager"
+                                    />
+                                </a>
+                                <div class="entry-date"><span>11</span> <span>Mar 20</span></div>
+                            </div>
+                            <div class="entry-body">
+                                <div class="entry-holder">
+                                    <h2 class="entry-title"><a href="content-marketing/index.htm"> Content Marketing </a></h2>
+                                    <ul class="entry-meta">
+                                        <li class="item-author"><i class="fac fac-user"></i><a href="../author/admin/index.htm" title="Posts by Rinnah" rel="author">Rinnah</a></li>
+                                        <li class="item-comment"><i class="fac fac-comments"></i><a href="content-marketing/index.htm">No Comments</a></li>
+                                    </ul>
+                                    <div class="entry-excerpt">
+                                        We give the best Services There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words
+                                        which don&#8217;t look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to&hellip;
+                                    </div>
+                                    <div class="entry-readmore">
+                                        <a href="content-marketing/index.htm" class="btn-text text-gradient"> <i class="fac fac-angle-right"></i> <span>Read More</span> </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <!-- #post -->
+                        <nav class="navigation posts-pagination">
+                            <div class="posts-page-links">
+                                <span aria-current="page" class="page-numbers current">1</span> <a class="page-numbers" href="page/2/index.htm">2</a> <a class="page-numbers" href="page/3/index.htm">3</a>
+                                <a class="next page-numbers" href="page/2/index.htm"><i class="far fac-angle-right"></i></a>
+                            </div>
+                        </nav>
+                    </main>
+                    <!-- #main -->
+                </div>
+                <!-- #primary -->
+            </div>
+        </div>
+    </div>
+    <!-- #content inner -->
+</div>
+<!-- #content -->
 @endsection
---}}

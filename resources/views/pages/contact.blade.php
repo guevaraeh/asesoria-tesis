@@ -16,6 +16,7 @@ Contact v.2 &#8211; Consultio
 <link rel="stylesheet" id="widget-text-editor-css" href="{{ asset('libraries/wp-content/plugins/elementor/assets/css/widget-text-editor.min.css') }}?ver=3.25.4" type="text/css" media="all" />
 <link rel="stylesheet" id="widget-google_maps-css" href="{{ asset('libraries/wp-content/plugins/elementor/assets/css/widget-google_maps.min.css') }}?ver=3.25.4" type="text/css" media="all" />
 <link rel="stylesheet" id="elementor-post-3510-css" href="{{ asset('libraries/wp-content/uploads/elementor/css/post-3510.css') }}?ver=1729683939" type="text/css" media="all" />
+{{--
 <link
     rel="stylesheet"
     id="google-fonts-1-css"
@@ -23,6 +24,7 @@ Contact v.2 &#8211; Consultio
     type="text/css"
     media="all"
 />
+--}}
 <link rel="stylesheet" id="elementor-icons-shared-0-css" href="{{ asset('libraries/wp-content/plugins/elementor/assets/lib/font-awesome/css/fontawesome.min.css') }}?ver=5.15.3" type="text/css" media="all" />
 <link rel="stylesheet" id="elementor-icons-fa-solid-css" href="{{ asset('libraries/wp-content/plugins/elementor/assets/lib/font-awesome/css/solid.min.css') }}?ver=5.15.3" type="text/css" media="all" />
 <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
@@ -240,13 +242,30 @@ Contact v.2 &#8211; Consultio
                                                                                                 <p role="status" aria-live="polite" aria-atomic="true"></p>
                                                                                                 <ul></ul>
                                                                                             </div>
+                                                                                            @if(Session::has('success'))
+                                                                                            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                                                                                                <strong>¡Mensaje enviado!</strong> Nos pondremos en contacto en un tiempo.
+                                                                                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                                                                    <span aria-hidden="true">&times;</span>
+                                                                                                </button>
+                                                                                            </div>
+                                                                                            @elseif(Session::has('error'))
+                                                                                            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                                                                                <strong>¡No se pudo enviar!</strong> Hubo un problema para enviar, inténtelo luego.
+                                                                                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                                                                    <span aria-hidden="true">&times;</span>
+                                                                                                </button>
+                                                                                            </div>
+                                                                                            @endif
                                                                                             <form
                                                                                                 action="{{ route('contact.email') }}"
                                                                                                 method="POST"
+{{--
                                                                                                 class="wpcf7-form init"
                                                                                                 aria-label="Contact form"
                                                                                                 novalidate="novalidate"
                                                                                                 data-status="init"
+--}}
                                                                                             >
                                                                                                 @csrf
                                                                                                 <div style="display: none;">
