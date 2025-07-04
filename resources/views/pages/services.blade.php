@@ -547,6 +547,7 @@ Services &#8211; Consultio
 
 @section('up')
 <link rel="stylesheet" id="consultio-style-css" href="{{ asset('libraries/wp-content/themes/csuti/consultio-style.min.css') }}?ver=6.8.1" type="text/css" media="all" />
+
 <link
     rel="stylesheet"
     id="consultio-google-fonts-css"
@@ -634,7 +635,6 @@ Services &#8211; Consultio
                             </div>
                         </article>
                         @endforeach
-
                         <article id="post-4177" class="single-hentry archive post-4177 service type-service status-publish hentry service-category-business">
                             <div class="entry-body">
                                 <div class="entry-holder">
