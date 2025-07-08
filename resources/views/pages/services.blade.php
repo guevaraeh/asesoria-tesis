@@ -548,6 +548,26 @@ Services &#8211; Consultio
 @section('up')
 <link rel="stylesheet" id="consultio-style-css" href="{{ asset('libraries/wp-content/themes/csuti/consultio-style.min.css') }}?ver=6.8.1" type="text/css" media="all" />
 
+
+<link rel="stylesheet" id="meks-flickr-widget-css" href="{{ asset('libraries/wp-content/plugins/meks-simple-flickr-widget/css/meks-flickr-widget.min.css') }}?ver=1.3" type="text/css" media="all" />
+<link rel="stylesheet" id="newsletter-css" href="{{ asset('libraries/wp-content/plugins/newsletter/newsletter.min.css') }}?ver=8.6.0" type="text/css" media="all" />
+<link rel="stylesheet" id="elementor-icons-css" href="{{ asset('libraries/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css') }}?ver=5.31.0" type="text/css" media="all" />
+<link rel="stylesheet" id="elementor-frontend-css" href="{{ asset('libraries/wp-content/plugins/elementor/assets/css/frontend.min.css') }}?ver=3.25.4" type="text/css" media="all" />
+<link rel="stylesheet" id="swiper-css" href="{{ asset('libraries/wp-content/plugins/elementor/assets/lib/swiper/v8/css/swiper.min.css') }}?ver=8.4.5" type="text/css" media="all" />
+<link rel="stylesheet" id="e-swiper-css" href="{{ asset('libraries/wp-content/plugins/elementor/assets/css/conditionals/e-swiper.min.css') }}?ver=3.25.4" type="text/css" media="all" />
+<link rel="stylesheet" id="elementor-post-4540-css" href="{{ asset('libraries/wp-content/uploads/elementor/css/post-4540.css') }}?ver=1729675946" type="text/css" media="all" />
+<link rel="stylesheet" id="sbistyles-css" href="{{ asset('libraries/wp-content/plugins/instagram-feed/css/sbi-styles.min.css') }}?ver=6.6.0" type="text/css" media="all" />
+<link rel="stylesheet" id="widget-text-editor-css" href="{{ asset('libraries/wp-content/plugins/elementor/assets/css/widget-text-editor.min.css') }}?ver=3.25.4" type="text/css" media="all" />
+<link rel="stylesheet" id="elementor-post-407-css" href="{{ asset('libraries/wp-content/uploads/elementor/css/post-407.css') }}?ver=1729683959" type="text/css" media="all" />
+
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+<script type="text/javascript" src="{{ asset('libraries/wp-includes/js/jquery/jquery.min.js') }}?ver=3.7.1" id="jquery-core-js"></script>
+<script type="text/javascript" src="{{ asset('libraries/wp-includes/js/jquery/jquery-migrate.min.js') }}?ver=3.4.1" id="jquery-migrate-js"></script>
+<script type="text/javascript" src="{{ asset('libraries/wp-content/plugins/case-theme-core/assets/js/lib/waypoints.min.js') }}?ver=2.0.5" id="waypoints-js"></script>
+<script type="text/javascript" src="{{ asset('libraries/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js') }}?ver=2.7.0-wc.9.3.3" id="jquery-blockui-js" defer="defer" data-wp-strategy="defer"></script>
+<script type="text/javascript" id="wc-add-to-cart-js-extra">
+
+
 <link
     rel="stylesheet"
     id="consultio-google-fonts-css"
@@ -635,6 +655,7 @@ Services &#8211; Consultio
                             </div>
                         </article>
                         @endforeach
+{{--
                         <article id="post-4177" class="single-hentry archive post-4177 service type-service status-publish hentry service-category-business">
                             <div class="entry-body">
                                 <div class="entry-holder">
@@ -777,12 +798,24 @@ Services &#8211; Consultio
                             </div>
                         </article>
                         <!-- #post -->
+--}}
+                        {{ $services->links('layouts.paginate') }}
+                        <br>
+{{--
                         <nav class="navigation posts-pagination">
                             <div class="posts-page-links">
-                                <span aria-current="page" class="page-numbers current">1</span> <a class="page-numbers" href="page/2/index.htm">2</a> <a class="page-numbers" href="page/3/index.htm">3</a>
-                                <a class="next page-numbers" href="page/2/index.htm"><i class="far fac-angle-right"></i></a>
+                                <a class="prev page-numbers" href="page/2/index.htm">
+                                    <i class="far fac-angle-left"></i>
+                                </a>
+                                <span aria-current="page" class="page-numbers current">1</span> 
+                                <a class="page-numbers" href="page/2/index.htm">2</a> 
+                                <a class="page-numbers" href="page/3/index.htm">3</a>
+                                <a class="next page-numbers" href="page/2/index.htm">
+                                    <i class="far fac-angle-right"></i>
+                                </a>
                             </div>
                         </nav>
+--}}
                     </main>
                     <!-- #main -->
                 </div>

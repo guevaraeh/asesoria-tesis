@@ -9,7 +9,7 @@
                         <a href="#" target="_blank"><i class="fab fac-twitter"></i></a>
                         <a href="#" target="_blank"><i class="fab fac-linkedin-in"></i></a>
                         <a href="#" target="_blank"><i class="fab fac-instagram"></i></a>
-                        <a href="https://api.whatsapp.com/send?phone=51{{ $main_phone->number }}" target="_blank"><i class="fab fac-whatsapp"></i></a>
+                        <a href="https://api.whatsapp.com/send?phone=51{{ $main_phone->number }}" target="_blank"><i class="fab fac-whatsapp" style="color: #017762;"></i></a>
                     </div>
                 </div>
             </div>
@@ -25,7 +25,7 @@
                     <div class="ct-header-holder">
                         <div class="ct-header-info-item ct-header-call">
                             <div class="h-item-icon"><i class="flaticon-telephone text-gradient"></i></div>
-                            <div class="h-item-meta"><label>Llámanos: 51 {{ $main_phone->number }}</label> <span>(Sat - Thursday)</span></div>
+                            <div class="h-item-meta"><label>Llámanos: 51 {{ $main_phone->number }}</label> <span>(Lunes - Sabado)</span></div>
                             <a href="https://api.whatsapp.com/send?phone=51{{ $main_phone->number }}" target="_blank" class="h-item-link"></a>
                         </div>
                         <div class="ct-header-info-item ct-header-mail">

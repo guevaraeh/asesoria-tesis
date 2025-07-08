@@ -6,6 +6,8 @@ use App\Models\Phone;
 use App\Models\Email;
 use App\Models\Service;
 
+use Illuminate\Support\Facades\DB;
+
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -17,157 +19,54 @@ class AdminController extends Controller
     {
         $phones = Phone::get();
         $emails = Email::get();
-        $services = Service::get();
 
-        return view('admin.app',['phones' => $phones, 'emails' => $emails, 'services' => $services]);
+        $general = null;
+        $general = DB::table('generals')->first();
+
+        $main_phone = Phone::where('main',1)->first();
+        $services = Service::orderBy('created_at','DESC')->get();
+
+        return view('admin.app',['phones' => $phones, 'emails' => $emails, 'services' => $services, 'main_phone' => $main_phone, 'general' => $general]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create_phone()
+    public function update(Request $request)
     {
-        //
+        DB::table('generals')->updateOrInsert(
+            ['id' => 1],
+            [
+                'description' => $request->input('description'), 
+                'address' => $request->input('address'),
+                'map' => $request->input('map'), 
+                'cv' => $request->input('cv'),
+                'facebook' => $request->input('facebook'), 
+                'x' => $request->input('x'),
+                'linkedin' => $request->input('linkedin'), 
+                'instagram' => $request->input('instagram'),
+            ],
+        );
+
+        /*$general = General::updateOrCreate(
+            ['id' => 1],
+            [
+                'description' => $request->input('description'), 
+                'address' => $request->input('location'),
+                'map' => $request->input('map'), 
+                'cv' => $request->input('cv'),
+                'facebook' => $request->input('facebook'), 
+                'x' => $request->input('x'),
+                'linkedin' => $request->input('linkedin'), 
+                'instagram' => $request->input('instagram'),
+            ],
+        );*/
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store_phone(Request $request)
+    public function download_cv()
     {
-        //dd($request->collect());
-
-        $phone = new Phone;
-        $phone->number = $request->input('number');
-        $phone->main = $request->input('main');
-        if($request->input('main') == '1')
-            Phone::query()->update(['main' => 0]);
-        $phone->save();
-
-        return redirect(route('index'))->with('success', 'Número registrado');
-    }
-    
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create_email()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store_email(Request $request)
-    {
-        $email = new Email;
-        $email->email = $request->input('email');
-        $email->main = $request->input('main');
-        if($request->input('main') == '1')
-            Email::query()->update(['main' => 0]);
-        $email->save();
-
-        return redirect(route('index'))->with('success', 'Correo registrado');
-    }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit_phone(Phone $phone)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update_phone(Request $request, Phone $phone)
-    {
-        $phone->number = $request->input('number');
-        $phone->save();
-
-        return redirect(route('index'))->with('success', 'Número editado');
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit_email(Email $email)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update_email(Request $request, Email $email)
-    {
-        $email->email = $request->input('email');
-        $email->save();
-
-        return redirect(route('index'))->with('success', 'Correo editado');
-    }
-
-    public function main_phone(Phone $phone)
-    {
-        Phone::query()->update(['main' => 0]);
-        $phone->main = 1;
-        $phone->save();
-
-        return redirect(route('index'))->with('success', 'Número principal');
-    }
-
-    public function main_email(Email $email)
-    {
-        Email::query()->update(['main' => 0]);
-        $email->main = 1;
-        $email->save();
-
-        return redirect(route('index'))->with('success', 'Número principal');
-    }
-
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy_phone(Phone $phone)
-    {
-        if($phone->main == 1)
-        {
-            $ph = Phone::where('main','<>',1)->first();
-            if($ph)
-            {
-                $ph->main = 1;
-                $ph->save();        
-            }
+        $ruta = public_path("cv\Professional_CV_Jhon.pdf");
+        if (file_exists($ruta)) {
+            return response()->download($ruta);
+            } else {
+            abort(404, 'Archivo no encontrado.');
         }
-        $phone->delete();
-        return redirect(route('index'))->with('success', 'Número eliminado');
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy_email(Email $email)
-    {
-        if($email->main == 1)
-        {
-            $em = Email::where('main','<>',1)->first();
-            if($em)
-            {
-                $em->main = 1;
-                $em->save();        
-            }
-        }
-        $email->delete();
-        return redirect(route('index'))->with('success', 'Correo eliminado');
     }
 }

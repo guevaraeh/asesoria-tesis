@@ -45,7 +45,7 @@ class ClientController extends Controller
         $main_phone = Phone::where('main',1)->first();
         $main_email = Email::where('main',1)->first();
 
-        $services = Service::get();
+        $services = Service::orderBy('created_at','DESC')->paginate(5);
 
         return view('pages.services', ['main_phone' => $main_phone, 'main_email' => $main_email, 'services' => $services]);
     }
