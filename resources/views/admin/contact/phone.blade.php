@@ -22,7 +22,7 @@
             @foreach($phones as $phone)
                 <tr>
                     <td>{{ $loop->iteration }}</td>
-                    <td>{{ $phone->number }}</td>
+                    <td>{{ preg_replace("/^(\d{3})(\d{3})(\d{3})$/", "$1 $2 $3", $phone->number) }}</td>
                     <td>{{ $phone->main ? 'Si' : 'No' }}</td>
                     <td>
                         <div class="btn-group" role="group">

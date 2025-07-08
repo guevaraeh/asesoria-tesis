@@ -25,7 +25,7 @@
                     <div class="ct-header-holder">
                         <div class="ct-header-info-item ct-header-call">
                             <div class="h-item-icon"><i class="flaticon-telephone text-gradient"></i></div>
-                            <div class="h-item-meta"><label>Llámanos: 51 {{ $main_phone->number }}</label> <span>(Lunes - Sabado)</span></div>
+                            <div class="h-item-meta"><label>Llámanos: +51 {{ preg_replace("/^(\d{3})(\d{3})(\d{3})$/", "$1 $2 $3", $main_phone->number) }}</label> <span>(Lunes - Sabado)</span></div>
                             <a href="https://api.whatsapp.com/send?phone=51{{ $main_phone->number }}" target="_blank" class="h-item-link"></a>
                         </div>
                         <div class="ct-header-info-item ct-header-mail">

@@ -76,7 +76,7 @@
                                         </tr>
                                         <tr>
                                             <th>WhatsApp</th>
-                                            <td>{{ $main_phone->number }}</td>
+                                            <td>{{ preg_replace("/^(\d{3})(\d{3})(\d{3})$/", "$1 $2 $3", $main_phone->number) }}</td>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -90,7 +90,7 @@
 
                             </div>
                         </div>
-{{--
+
                         <form action="{{ route('update') }}" method="POST" enctype="multipart/form-data" id="form-general">
                             <div class="modal" id="exampleModal-general" tabindex="-1" aria-labelledby="exampleModalLabel-general" aria-hidden="true">
                                 <div class="modal-dialog modal-dialog-centered modal-lg">
@@ -104,17 +104,17 @@
                                             @method('PUT')
                                             <div class="mb-3">
                                                 <label class="form-label"><b>Descripción</b></label>
-                                                <input type="text" name="description" class="form-control" required>
+                                                <input type="text" name="description" class="form-control" value="{{ isset($general) ? $general->description : '' }}" required>
                                             </div>
 
                                             <div class="mb-3">
                                                 <label class="form-label"><b>Dirección</b></label>
-                                                <input type="text" name="address" class="form-control" required>
+                                                <input type="text" name="address" class="form-control" placeholder="Direccion, Ciudad, País" value="{{ isset($general) ? $general->address : '' }}" required>
                                             </div>
 
                                             <div class="mb-3">
                                                 <label class="form-label"><b>Google Maps</b></label>
-                                                <input type="url" name="map" class="form-control" placeholder="https://maps.google.com/maps?q=..." required>
+                                                <input type="url" name="map" class="form-control" placeholder="https://maps.google.com/maps?q=..." value="{{ isset($general) ? $general->map : '' }}" required>
                                             </div>
 
                                             <div class="mb-3">
@@ -124,22 +124,22 @@
 
                                             <div class="mb-3">
                                                 <label class="form-label"><b>Facebook</b></label>
-                                                <input type="url" name="facebook" class="form-control" placeholder="https://www.facebook.com/...">
+                                                <input type="url" name="facebook" class="form-control" placeholder="https://www.facebook.com/..." value="{{ isset($general) ? $general->facebook : '' }}">
                                             </div>
 
                                             <div class="mb-3">
                                                 <label class="form-label"><b>X</b></label>
-                                                <input type="url" name="x" class="form-control" placeholder="https://x.com/...">
+                                                <input type="url" name="x" class="form-control" placeholder="https://x.com/..." value="{{ isset($general) ? $general->x : '' }}">
                                             </div>
 
                                             <div class="mb-3">
                                                 <label class="form-label"><b>LinkedIn</b></label>
-                                                <input type="url" name="linkedin" class="form-control" placeholder="https://www.linkedin.com/...">
+                                                <input type="url" name="linkedin" class="form-control" placeholder="https://pe.linkedin.com/in/..." value="{{ isset($general) ? $general->linkedin : '' }}">
                                             </div>
 
                                             <div class="mb-3">
                                                 <label class="form-label"><b>Instagram</b></label>
-                                                <input type="url" name="instagram" class="form-control" placeholder="https://www.instagram.com/...">
+                                                <input type="url" name="instagram" class="form-control" placeholder="https://www.instagram.com/..." value="{{ isset($general) ? $general->instagram : '' }}">
                                             </div>
                                             
                                         </div>
@@ -151,7 +151,7 @@
                                 </div>
                             </div>
                         </form>
---}}
+
 
 
                     </div>

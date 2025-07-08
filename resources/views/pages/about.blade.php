@@ -280,7 +280,7 @@ About &#8211; Consultio
                                                             <div class="ct-cta1">
                                                                 <div class="item--holder"><span class="item--title">¿Quieres saber más sobre nosotros?</span> <span class="item--desc">Descarga el CV...</span></div>
                                                                 <div class="item--button">
-                                                                    <a class="btn btn-white" href="#"> <i aria-hidden="true" class="fas fa-cloud-download-alt"></i> Descargar </a>
+                                                                    <a class="btn btn-white" href="{{ route('download_cv') }}"> <i aria-hidden="true" class="fas fa-cloud-download-alt"></i> Descargar </a>
                                                                 </div>
                                                             </div>
                                                         </div>

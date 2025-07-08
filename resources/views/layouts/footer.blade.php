@@ -316,6 +316,7 @@
                                         </div>
                                     </div>
                                 </div>
+
                                 <div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-2317946e" data-id="2317946e" data-element_type="column">
                                     <div class="elementor-widget-wrap elementor-element-populated">
                                         <div class="elementor-element elementor-element-66f42b8 elementor-widget elementor-widget-ct_heading" data-id="66f42b8" data-element_type="widget" data-widget_type="ct_heading.default">
@@ -471,6 +472,7 @@
                                         </div>
                                     </div>
                                 </div>
+                                
                             </div>
                         </section>
                         <section

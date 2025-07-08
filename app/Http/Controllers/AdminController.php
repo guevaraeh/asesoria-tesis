@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Phone;
 use App\Models\Email;
 use App\Models\Service;
+use App\Models\General;
 
 use Illuminate\Support\Facades\DB;
 
@@ -21,7 +22,7 @@ class AdminController extends Controller
         $emails = Email::get();
 
         $general = null;
-        $general = DB::table('generals')->first();
+        $general = General::first();
 
         $main_phone = Phone::where('main',1)->first();
         $services = Service::orderBy('created_at','DESC')->get();
@@ -31,7 +32,7 @@ class AdminController extends Controller
 
     public function update(Request $request)
     {
-        DB::table('generals')->updateOrInsert(
+        /*DB::table('generals')->updateOrInsert(
             ['id' => 1],
             [
                 'description' => $request->input('description'), 
@@ -43,13 +44,13 @@ class AdminController extends Controller
                 'linkedin' => $request->input('linkedin'), 
                 'instagram' => $request->input('instagram'),
             ],
-        );
+        );*/
 
         /*$general = General::updateOrCreate(
             ['id' => 1],
             [
                 'description' => $request->input('description'), 
-                'address' => $request->input('location'),
+                'address' => $request->input('address'),
                 'map' => $request->input('map'), 
                 'cv' => $request->input('cv'),
                 'facebook' => $request->input('facebook'), 
@@ -58,6 +59,29 @@ class AdminController extends Controller
                 'instagram' => $request->input('instagram'),
             ],
         );*/
+        //dd($request);
+
+        $general = General::first();
+        if(!isset($general))
+            $general = new General;
+
+        $general->description = $request->input('description');
+        $general->address = $request->input('address');
+        $general->map = $request->input('map');
+        //$general->cv = $request->input('cv');
+        if($request->hasFile('cv'))
+        {
+            $filename = $request->file('cv')->getClientOriginalName();  
+            $request->file('cv')->move(public_path('cv'), $filename);
+            $general->cv = $filename;
+        }
+        $general->facebook = $request->input('facebook');
+        $general->x = $request->input('x');
+        $general->linkedin = $request->input('linkedin');
+        $general->instagram = $request->input('instagram');
+        $general->save();
+
+        return redirect(route('index'))->with('success', 'Información actualizada');
     }
 
     public function download_cv()

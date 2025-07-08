@@ -192,7 +192,7 @@ Contact v.2 &#8211; Consultio
                                                                                         (843) 971-1906
 --}}
                                                                                         @foreach($phones as $phone)
-                                                                                        {{ $phone->number }}<br />
+                                                                                        {{ preg_replace("/^(\d{3})(\d{3})(\d{3})$/", "$1 $2 $3", $phone->number) }}<br />
                                                                                         @endforeach
                                                                                     </div>
                                                                                 </div>
