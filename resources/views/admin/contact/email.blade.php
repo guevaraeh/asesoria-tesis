@@ -2,7 +2,7 @@
     <div class="card-header d-flex justify-content-between align-items-center py-3">
         <h5 class="card-title text-primary"><i class="bi bi-envelope"></i> Correos electrónicos para contacto</h5>
         <div class="card-tools">
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal-add-email" title="Agregar">
+            <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#exampleModal-add-email" title="Agregar">
                 <i class="bi bi-plus-lg"></i>
             </button>
         </div>

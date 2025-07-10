@@ -5,11 +5,18 @@
                 <div class="row">
                     <div class="ct-header-wellcome">Welcome to our consulting company <span>Consultio!</span></div>
                     <div class="ct-header-social">
+                        @if(isset($general))
+                        <a href="{{ $general->facebook ? $general->facebook : '#' }}" target="_blank"><i class="fab fac-facebook-f"></i></a>
+                        <a href="{{ $general->x ? $general->x : '#' }}" target="_blank"><i class="fab fac-twitter"></i></a>
+                        <a href="{{ $general->linkedin ? $general->linkedin : '#' }}" target="_blank"><i class="fab fac-linkedin-in"></i></a>
+                        <a href="{{ $general->instagram ? $general->instagram : '#' }}" target="_blank"><i class="fab fac-instagram"></i></a>
+                        @else
                         <a href="#" target="_blank"><i class="fab fac-facebook-f"></i></a>
                         <a href="#" target="_blank"><i class="fab fac-twitter"></i></a>
                         <a href="#" target="_blank"><i class="fab fac-linkedin-in"></i></a>
                         <a href="#" target="_blank"><i class="fab fac-instagram"></i></a>
-                        <a href="https://api.whatsapp.com/send?phone=51{{ $main_phone->number }}" target="_blank"><i class="fab fac-whatsapp" style="color: #017762;"></i></a>
+                        @endif
+                        <a href="https://api.whatsapp.com/send?phone=51{{ isset($main_phone) ? $main_phone->number : '#' }}" target="_blank"><i class="fab fac-whatsapp" style="color: #017762;"></i></a>
                     </div>
                 </div>
             </div>
@@ -18,9 +25,14 @@
             <div class="container">
                 <div class="row">
                     <div class="ct-header-branding">
+{{--
                         <a class="logo-dark" href="../index.htm" title="Consultio" rel="home"><img src="{{ asset('libraries/wp-content/uploads/2021/02/logo-dark.png') }}" alt="Consultio" /></a>
                         <a class="logo-light" href="../index.htm" title="Consultio" rel="home"><img src="{{ asset('libraries/wp-content/uploads/2021/02/logo-light.png') }}" alt="Consultio" /></a>
                         <a class="logo-mobile" href="../index.htm" title="Consultio" rel="home"><img src="{{ asset('libraries/wp-content/uploads/2021/02/logo-dark.png') }}" alt="Consultio" /></a>
+--}}
+                        <a class="logo-dark" href="../index.htm" title="Consultio" rel="home"><img src="{{ asset('logo.jpg') }}" alt="Consultio" /></a>
+                        <a class="logo-light" href="../index.htm" title="Consultio" rel="home"><img src="{{ asset('logo.jpg') }}" alt="Consultio" /></a>
+                        <a class="logo-mobile" href="../index.htm" title="Consultio" rel="home"><img src="{{ asset('logo.jpg') }}" alt="Consultio" /></a>
                     </div>
                     <div class="ct-header-holder">
                         <div class="ct-header-info-item ct-header-call">
@@ -611,7 +623,7 @@
                                     <div class="ct-header-holder ct-header-holder-mobile">
                                         <div class="ct-header-info-item ct-header-call">
                                             <div class="h-item-icon"><i class="flaticon-telephone text-gradient"></i></div>
-                                            <div class="h-item-meta"><label>Llámanos: 51 {{ $main_phone->number }}</label> <span>(Sat - Thursday)</span></div>
+                                            <div class="h-item-meta"><label>Llámanos: 51 {{ preg_replace("/^(\d{3})(\d{3})(\d{3})$/", "$1 $2 $3", $main_phone->number) }}</label> <span>(Lunes - Sabado)</span></div>
                                             <a href="https://api.whatsapp.com/send?phone=51{{ $main_phone->number }}" target="_blank" class="h-item-link"></a>
                                         </div>
                                         <div class="ct-header-info-item ct-header-mail">

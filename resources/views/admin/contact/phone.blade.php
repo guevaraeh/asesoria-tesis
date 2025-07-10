@@ -2,7 +2,7 @@
     <div class="card-header d-flex justify-content-between align-items-center py-3">
         <h5 class="card-title text-primary"><i class="bi bi-telephone"></i> Teléfonos para contacto</h5>
         <div class="card-tools">
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal-add-phone" title="Agregar">
+            <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#exampleModal-add-phone" title="Agregar">
                 <i class="bi bi-plus-lg"></i>
             </button>
         </div>

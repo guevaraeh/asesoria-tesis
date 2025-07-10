@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\General;
 use App\Models\Phone;
 use App\Models\Email;
 use App\Models\Service;
@@ -15,39 +16,43 @@ class ClientController extends Controller
 {
     public function index()
     {
+        $general = General::first();
         $main_phone = Phone::where('main',1)->first();
         $main_email = Email::where('main',1)->first();
 
-        return view('pages.main', ['main_phone' => $main_phone, 'main_email' => $main_email]);
+        return view('pages.main', ['general' => $general, 'main_phone' => $main_phone, 'main_email' => $main_email]);
     }
 
     public function about()
     {
+        $general = General::first();
         $main_phone = Phone::where('main',1)->first();
         $main_email = Email::where('main',1)->first();
 
-        return view('pages.about', ['main_phone' => $main_phone, 'main_email' => $main_email]);
+        return view('pages.about', ['general' => $general, 'main_phone' => $main_phone, 'main_email' => $main_email]);
     }
 
     public function contact()
     {
+        $general = General::first();
         $main_phone = Phone::where('main',1)->first();
         $main_email = Email::where('main',1)->first();
 
         $phones = Phone::get();
         $emails = Email::get();
 
-        return view('pages.contact', ['main_phone' => $main_phone, 'main_email' => $main_email, 'phones' => $phones, 'emails' => $emails]);
+        return view('pages.contact', ['general' => $general, 'main_phone' => $main_phone, 'main_email' => $main_email, 'phones' => $phones, 'emails' => $emails]);
     }
 
     public function services()
     {
+        $general = General::first();
         $main_phone = Phone::where('main',1)->first();
         $main_email = Email::where('main',1)->first();
 
         $services = Service::orderBy('created_at','DESC')->paginate(5);
 
-        return view('pages.services', ['main_phone' => $main_phone, 'main_email' => $main_email, 'services' => $services]);
+        return view('pages.services', ['general' => $general, 'main_phone' => $main_phone, 'main_email' => $main_email, 'services' => $services]);
     }
 
     public function sendEmail()

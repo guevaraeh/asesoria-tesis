@@ -555,7 +555,7 @@
         <link rel="stylesheet" id="font-material-icon-css" href="{{ asset('libraries/wp-content/themes/csuti/assets/css/material-design-iconic-font.min.css') }}?ver=2.2.0" type="text/css" media="all" />
         <link rel="stylesheet" id="magnific-popup-css" href="{{ asset('libraries/wp-content/themes/csuti/assets/css/magnific-popup.min.css') }}?ver=1.0.0" type="text/css" media="all" />
         <link rel="stylesheet" id="animate-css" href="{{ asset('libraries/wp-content/themes/csuti/assets/css/animate.min.css') }}?ver=1.0.0" type="text/css" media="all" />
-        <link rel="stylesheet" id="consultio-theme-css" href="{{ asset('libraries/wp-content/themes/csuti/assets/css/consultio-theme.min.css') }}?ver=3.2.1" type="text/css" media="all" />
+        <link rel="stylesheet" id="consultio-theme-css" href="{{ asset('libraries/wp-content/themes/csuti/assets/css/consultio-theme-global.min.css') }}?ver=3.2.1" type="text/css" media="all" />
         <style id="consultio-theme-inline-css" type="text/css">
             :root {
                 --gradient-color-from: #ffc000;
@@ -889,7 +889,29 @@
         <script type="speculationrules">
             {"prefetch":[{"source":"document","where":{"and":[{"href_matches":"\/consultio-digital-marketing\/*"},{"not":{"href_matches":["\/consultio-digital-marketing\/wp-*.php","\/consultio-digital-marketing\/wp-admin\/*","\/consultio-digital-marketing\/wp-content\/uploads\/*","\/consultio-digital-marketing\/wp-content\/*","\/consultio-digital-marketing\/wp-content\/plugins\/*","\/consultio-digital-marketing\/wp-content\/themes\/csuti\/*","\/consultio-digital-marketing\/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
         </script>
-        <a class="pxl-buy-now" href="https://api.whatsapp.com/send?phone=51951677400" target="_blank"> <span>Whatsapp</span> </a>
+        {{--<a class="pxl-buy-now" href="https://api.whatsapp.com/send?phone=51951677400" target="_blank"> <span>Whatsapp</span> </a>--}}
+        
+        
+        <style>
+            .call-us {
+                width: 48px;
+                height: 48px;
+                background-color: #017762;
+                border-radius: 100%;
+                background-image: url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/svgs/solid/user.svg);
+                background-repeat: no-repeat;
+                background-position: 50%;
+                display: block;
+                position: fixed;
+                bottom: 40px;
+                left: 40px;
+                z-index: 1001;
+                box-shadow: 0 5px 10px rgba(0,0,0,8%);
+            }
+        </style>
+        <a class="call-us" href="https://api.whatsapp.com/send?phone=51{{ isset($main_phone) ? $main_phone->number : '#' }}" target="_blank"> <span>Whatsapp</span> </a>
+
+
         <script>
             (function () {
                 function maybePrefixUrlField() {

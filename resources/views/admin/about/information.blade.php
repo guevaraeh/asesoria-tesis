@@ -1,0 +1,122 @@
+<div class="card shadow mb-4">
+    <div class="card-header d-flex justify-content-between align-items-center py-3">
+        <h5 class="card-title text-primary"><i class="bi bi-card-list"></i> Datos generales</h5>
+        <div class="card-tools">
+            <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#exampleModal-general">
+                <i class="bi bi-pen"></i>
+            </button>
+        </div>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-hover table-bordered">
+            <thead>
+                <tr>
+                    <th>Descripción</th>
+                    <td>{{ isset($general) ? $general->description : '-' }}</td>
+                </tr>
+                <tr>
+                    <th>Dirección</th>
+                    <td>{{ isset($general) ? $general->address : '-' }}</td>
+                </tr>
+                <tr>
+                    <th>Google Maps</th>
+                    <td>{{ isset($general) ? $general->map : '-' }}</td>
+                </tr>
+                <tr>
+                    <th>CV</th>
+                    <td><a href="{{ route('download_cv') }}"><i class="bi bi-download"></i></a></td>
+                </tr>
+                <tr>
+                    <th>Facebook</th>
+                    <td>{{ isset($general) ? $general->facebook : '-' }}</td>
+                </tr>
+                <tr>
+                    <th>X</th>
+                    <td>{{ isset($general) ? $general->x : '-' }}</td>
+                </tr>
+                <tr>
+                    <th>LinkedIn</th>
+                    <td>{{ isset($general) ? $general->linkedin : '-' }}</td>
+                </tr>
+                <tr>
+                    <th>Instagram</th>
+                    <td>{{ isset($general) ? $general->instagram : '-' }}</td>
+                </tr>
+                <tr>
+                    <th>WhatsApp</th>
+                    <td>{{ preg_replace("/^(\d{3})(\d{3})(\d{3})$/", "$1 $2 $3", $main_phone->number) }}</td>
+                </tr>
+            </thead>
+            <tbody>
+            
+            </tbody>
+        </table>
+        </div>
+        
+    </div>
+    <div class="card-footer py-3">
+
+    </div>
+</div>
+
+<form action="{{ route('update') }}" method="POST" enctype="multipart/form-data" id="form-general">
+    <div class="modal" id="exampleModal-general" tabindex="-1" aria-labelledby="exampleModalLabel-general" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-info">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel"><i class="bi bi-card-list"></i> Editar Datos generales</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    @csrf
+                    @method('PUT')
+                    <div class="mb-3">
+                        <label class="form-label"><b>Descripción</b></label>
+                        <input type="text" name="description" class="form-control" value="{{ isset($general) ? $general->description : '' }}" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label"><b>Dirección</b></label>
+                        <input type="text" name="address" class="form-control" placeholder="Direccion, Ciudad, País" value="{{ isset($general) ? $general->address : '' }}" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label"><b>Google Maps</b></label>
+                        <input type="url" name="map" class="form-control" placeholder="https://maps.google.com/maps?q=..." value="{{ isset($general) ? $general->map : '' }}">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label"><b>CV</b></label>
+                        <input type="file" name="cv" class="form-control">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label"><b>Facebook</b></label>
+                        <input type="url" name="facebook" class="form-control" placeholder="https://www.facebook.com/..." value="{{ isset($general) ? $general->facebook : '' }}">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label"><b>X</b></label>
+                        <input type="url" name="x" class="form-control" placeholder="https://x.com/..." value="{{ isset($general) ? $general->x : '' }}">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label"><b>LinkedIn</b></label>
+                        <input type="url" name="linkedin" class="form-control" placeholder="https://pe.linkedin.com/in/..." value="{{ isset($general) ? $general->linkedin : '' }}">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label"><b>Instagram</b></label>
+                        <input type="url" name="instagram" class="form-control" placeholder="https://www.instagram.com/..." value="{{ isset($general) ? $general->instagram : '' }}">
+                    </div>
+                    
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn btn-primary">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
