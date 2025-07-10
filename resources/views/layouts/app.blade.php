@@ -898,7 +898,8 @@
                 height: 48px;
                 background-color: #017762;
                 border-radius: 100%;
-                background-image: url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/svgs/solid/user.svg);
+                /*background-image: url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/svgs/solid/user.svg);*/
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='%2300e676' d='M380.9 97.1C339-3.2 202.2-26.4 112.7 48.1c-62.2 52.1-81.2 138-46.9 211.7L0 480l224.1-64.8c66.4 18.7 136.6-1.2 184.8-53.1 50.8-54.7 64.3-132.7 32-198.9zM224.1 388c-23.4 0-46.3-6.1-66.4-17.5l-7.1-4.1-78.5 22.7 22.6-76.5-4.6-7.5c-13.5-21.9-20.6-47.1-20.6-72.9 0-76.2 62-138.2 138.2-138.2 36.9 0 71.5 14.4 97.6 40.6s40.6 60.7 40.6 97.6c0 76.1-62 138.1-138.2 138.1zm77.7-101.1c-4.2-2.1-24.9-12.3-28.8-13.7s-6.7-2.1-9.5 2.1-10.9 13.7-13.4 16.5-4.9 3.1-9.1 1-17.6-6.5-33.5-20.6c-12.4-11.1-20.7-24.9-23.1-29.1s-.3-6.5 1.8-8.6c1.8-1.8 4.2-4.9 6.2-7.4 2.1-2.5 2.8-4.2 4.2-7s.7-5.3-.4-7.4c-1.1-2.1-9.5-22.8-13-31.3-3.4-8.2-6.9-7.1-9.5-7.3-2.5-.1-5.3-.1-8.2-.1s-7.4 1.1-11.3 5.3c-3.9 4.2-14.8 14.5-14.8 35.3s15.2 40.9 17.3 43.8c2.1 2.8 29.8 45.5 72.3 63.8 10.1 4.4 18 7.1 24.2 9.1 10.1 3.2 19.3 2.7 26.6 1.6 8.1-1.2 24.9-10.2 28.4-20.1s3.5-18.3 2.5-20.1c-1-1.8-3.8-2.9-7.9-4.9z'/%3E%3C/svg%3E");
                 background-repeat: no-repeat;
                 background-position: 50%;
                 display: block;
@@ -909,7 +910,7 @@
                 box-shadow: 0 5px 10px rgba(0,0,0,8%);
             }
         </style>
-        <a class="call-us" href="https://api.whatsapp.com/send?phone=51{{ isset($main_phone) ? $main_phone->number : '#' }}" target="_blank"> <span>Whatsapp</span> </a>
+        <a class="call-us" href="https://api.whatsapp.com/send?phone=51{{ isset($main_phone) ? $main_phone->number : '#' }}" target="_blank"> <span></span> </a>
 
 
         <script>
