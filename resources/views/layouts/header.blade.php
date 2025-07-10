@@ -30,9 +30,9 @@
                         <a class="logo-light" href="../index.htm" title="Consultio" rel="home"><img src="{{ asset('libraries/wp-content/uploads/2021/02/logo-light.png') }}" alt="Consultio" /></a>
                         <a class="logo-mobile" href="../index.htm" title="Consultio" rel="home"><img src="{{ asset('libraries/wp-content/uploads/2021/02/logo-dark.png') }}" alt="Consultio" /></a>
 --}}
-                        <a class="logo-dark" href="../index.htm" title="Consultio" rel="home"><img src="{{ asset('logo.jpg') }}" alt="Consultio" /></a>
-                        <a class="logo-light" href="../index.htm" title="Consultio" rel="home"><img src="{{ asset('logo.jpg') }}" alt="Consultio" /></a>
-                        <a class="logo-mobile" href="../index.htm" title="Consultio" rel="home"><img src="{{ asset('logo.jpg') }}" alt="Consultio" /></a>
+                        <a class="logo-dark" href="../index.htm" title="Consultio" rel="home"><img src="{{ asset('logo_h.jpg') }}" alt="Consultio" /></a>
+                        <a class="logo-light" href="../index.htm" title="Consultio" rel="home"><img src="{{ asset('logo_h.jpg') }}" alt="Consultio" /></a>
+                        <a class="logo-mobile" href="../index.htm" title="Consultio" rel="home"><img src="{{ asset('logo_h.jpg') }}" alt="Consultio" /></a>
                     </div>
                     <div class="ct-header-holder">
                         <div class="ct-header-info-item ct-header-call">
@@ -58,9 +58,15 @@
             <div class="container">
                 <div class="row">
                     <div class="ct-header-branding">
+{{--
                         <a class="logo-dark" href="../index.htm" title="Consultio" rel="home"><img src="{{ asset('libraries/wp-content/uploads/2021/02/logo-dark.png') }}" alt="Consultio" /></a>
                         <a class="logo-light" href="../index.htm" title="Consultio" rel="home"><img src="{{ asset('libraries/wp-content/uploads/2021/02/logo-light.png') }}" alt="Consultio" /></a>
                         <a class="logo-mobile" href="../index.htm" title="Consultio" rel="home"><img src="{{ asset('libraries/wp-content/uploads/2021/02/logo-dark.png') }}" alt="Consultio" /></a>
+--}}
+
+                        <a class="logo-dark" href="#" title="Consultio" rel="home"><img src="{{ asset('logo_h.jpg') }}" alt="Consultio" /></a>
+                        <a class="logo-light" href="#" title="Consultio" rel="home"><img src="{{ asset('logo_h.jpg') }}" alt="Consultio" /></a>
+                        <a class="logo-mobile" href="#" title="Consultio" rel="home"><img src="{{ asset('logo_h.jpg') }}" alt="Consultio" /></a>
                     </div>
                     <div class="ct-header-navigation">
                         <div class="ct-header-navigation-bg">
