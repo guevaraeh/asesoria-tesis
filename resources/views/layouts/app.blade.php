@@ -5,7 +5,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" type="image/png" href="{{ asset('libraries/wp-content/uploads/2021/02/favicon.png') }}" />
+        @include('layouts.icon')
         <link rel="profile" href="//gmpg.org/xfn/11" />
         <script>
             document.documentElement.className = document.documentElement.className + " yes-js js_active js";
@@ -871,7 +871,9 @@
                 <div class="ct-header-popup-scroll">
                     <div class="ct-header-popup-main">
                         <div class="elementor-popup-social">
-                            <a href="#" target="_blank"><i class="fab fac-tripadvisor"></i></a><a href="#" target="_blank"><i class="fab fac-twitter"></i></a><a href="#" target="_blank"><i class="fab fac-instagram"></i></a>
+                            <a href="#" target="_blank"><i class="fab fac-tripadvisor"></i></a>
+                            <a href="#" target="_blank"><i class="fab fac-twitter"></i></a>
+                            <a href="#" target="_blank"><i class="fab fac-instagram"></i></a>
                         </div>
                     </div>
                 </div>
@@ -899,7 +901,7 @@
                 background-color: #017762;
                 border-radius: 100%;
                 /*background-image: url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/svgs/solid/user.svg);*/
-                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='%2300e676' d='M380.9 97.1C339-3.2 202.2-26.4 112.7 48.1c-62.2 52.1-81.2 138-46.9 211.7L0 480l224.1-64.8c66.4 18.7 136.6-1.2 184.8-53.1 50.8-54.7 64.3-132.7 32-198.9zM224.1 388c-23.4 0-46.3-6.1-66.4-17.5l-7.1-4.1-78.5 22.7 22.6-76.5-4.6-7.5c-13.5-21.9-20.6-47.1-20.6-72.9 0-76.2 62-138.2 138.2-138.2 36.9 0 71.5 14.4 97.6 40.6s40.6 60.7 40.6 97.6c0 76.1-62 138.1-138.2 138.1zm77.7-101.1c-4.2-2.1-24.9-12.3-28.8-13.7s-6.7-2.1-9.5 2.1-10.9 13.7-13.4 16.5-4.9 3.1-9.1 1-17.6-6.5-33.5-20.6c-12.4-11.1-20.7-24.9-23.1-29.1s-.3-6.5 1.8-8.6c1.8-1.8 4.2-4.9 6.2-7.4 2.1-2.5 2.8-4.2 4.2-7s.7-5.3-.4-7.4c-1.1-2.1-9.5-22.8-13-31.3-3.4-8.2-6.9-7.1-9.5-7.3-2.5-.1-5.3-.1-8.2-.1s-7.4 1.1-11.3 5.3c-3.9 4.2-14.8 14.5-14.8 35.3s15.2 40.9 17.3 43.8c2.1 2.8 29.8 45.5 72.3 63.8 10.1 4.4 18 7.1 24.2 9.1 10.1 3.2 19.3 2.7 26.6 1.6 8.1-1.2 24.9-10.2 28.4-20.1s3.5-18.3 2.5-20.1c-1-1.8-3.8-2.9-7.9-4.9z'/%3E%3C/svg%3E");
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='%2300e676' d='M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z'/%3E%3C/svg%3E");
                 background-repeat: no-repeat;
                 background-position: 50%;
                 display: block;
@@ -1017,17 +1019,20 @@
                 </div>
             </div>
         </div>
-        {{--
+{{--
         <script type="text/template" id="tmpl-variation-template">
             <div class="woocommerce-variation-description">{{{ data.variation.variation_description }}}</div><div class="woocommerce-variation-price">{{{ data.variation.price_html }}}</div><div class="woocommerce-variation-availability">{{{ data.variation.availability_html }}}</div>
         </script>
-        --}}
+--}}
         <script type="text/template" id="tmpl-unavailable-variation-template">
             <p role="alert">Sorry, this product is unavailable. Please choose a different combination.</p>
         </script>
         <link rel="stylesheet" id="wc-blocks-style-css" href="{{ asset('libraries/wp-content/plugins/woocommerce/assets/client/blocks/wc-blocks.css') }}?ver=wc-9.3.3" type="text/css" media="all" />
         <link rel="stylesheet" id="elementor-post-5137-css" href="{{ asset('libraries/wp-content/uploads/elementor/css/post-5137.css') }}?ver=1729675947" type="text/css" media="all" />
+{{--
         <link rel="stylesheet" id="elementor-post-20-css" href="{{ asset('libraries/wp-content/uploads/elementor/css/post-20.css') }}?ver=1729675948" type="text/css" media="all" />
+--}}
+        <link rel="stylesheet" id="elementor-post-20-css" href="{{ asset('libraries/wp-content/uploads/elementor/css/post-20-global.css') }}?ver=1729675948" type="text/css" media="all" />
         <link rel="stylesheet" id="photoswipe-css" href="{{ asset('libraries/wp-content/plugins/woocommerce/assets/css/photoswipe/photoswipe.min.css') }}?ver=9.3.3" type="text/css" media="all" />
         <link rel="stylesheet" id="photoswipe-default-skin-css" href="{{ asset('libraries/wp-content/plugins/woocommerce/assets/css/photoswipe/default-skin/default-skin.min.css') }}?ver=9.3.3" type="text/css" media="all" />
         <link

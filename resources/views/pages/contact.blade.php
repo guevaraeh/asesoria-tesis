@@ -446,12 +446,22 @@ Contact v.2 &#8211; Consultio
                                                     >
                                                         <div class="elementor-widget-container">
                                                             <div class="elementor-custom-embed">
+{{--
                                                                 <iframe
                                                                     loading="lazy"
                                                                     src="https://maps.google.com/maps?q=London%20Eye%2C%20London%2C%20United%20Kingdom&t=m&z=10&output=embed&iwloc=near"
                                                                     title="London Eye, London, United Kingdom"
                                                                     aria-label="London Eye, London, United Kingdom"
                                                                 ></iframe>
+--}}
+                                                                @if(isset($general))
+                                                                {{--  {!! $general->map !!} --}}
+                                                                <iframe
+                                                                    loading="lazy"
+                                                                    src="{{ $general->map }}"
+                                                                    title="{{ $general->address }}"
+                                                                ></iframe>
+                                                                @endif
                                                             </div>
                                                         </div>
                                                     </div>

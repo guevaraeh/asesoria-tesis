@@ -59,13 +59,16 @@ class AdminController extends Controller
                 'instagram' => $request->input('instagram'),
             ],
         );*/
-        //dd($request);
+        //$request->input('description.text') = explode("\\r\\n", $request->input('description.text'));
+        //dd(explode("\r\n", $request->input('description.text')));
 
         $general = General::first();
         if(!isset($general))
             $general = new General;
 
-        $general->description = $request->input('description');
+        //$general->description = $request->input('description');
+        $general->description = ["main" => $request->input('description.main'), "text" => explode("\r\n", $request->input('description.text'))];
+        //dd($general->description);
         $general->address = $request->input('address');
         $general->map = $request->input('map');
         //$general->cv = $request->input('cv');
@@ -86,7 +89,8 @@ class AdminController extends Controller
 
     public function download_cv()
     {
-        $ruta = public_path("cv\Professional_CV_Jhon.pdf");
+        $cv = General::first()->cv;
+        $ruta = public_path("cv/".$cv);
         if (file_exists($ruta)) {
             return response()->download($ruta);
             } else {

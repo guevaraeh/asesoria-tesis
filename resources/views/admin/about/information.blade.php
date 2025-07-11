@@ -13,7 +13,14 @@
             <thead>
                 <tr>
                     <th>Descripción</th>
-                    <td>{{ isset($general) ? $general->description : '-' }}</td>
+                    <td>
+                    @if(isset($general))
+                        <b>{{ json_decode($general->description)->main }}</b><br>
+                        @foreach(json_decode($general->description)->text as $text)
+                        {{ $text }}
+                        @endforeach
+                    @endif
+                    </td>
                 </tr>
                 <tr>
                     <th>Dirección</th>
@@ -23,6 +30,15 @@
                     <th>Google Maps</th>
                     <td>{{ isset($general) ? $general->map : '-' }}</td>
                 </tr>
+                @if(isset($general))
+                <tr>
+                    <th></th>
+                    <td>
+                        {{-- {!! $general->map !!} --}}
+                        <iframe src="{{ $general->map }}" width="500" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </td>
+                </tr>
+                @endif
                 <tr>
                     <th>CV</th>
                     <td><a href="{{ route('download_cv') }}"><i class="bi bi-download"></i></a></td>
@@ -73,7 +89,9 @@
                     @method('PUT')
                     <div class="mb-3">
                         <label class="form-label"><b>Descripción</b></label>
-                        <input type="text" name="description" class="form-control" value="{{ isset($general) ? $general->description : '' }}" required>
+                        {{--<input type="text" name="description" class="form-control" value="{{ isset($general) ? $general->description : '' }}" required>--}}
+                        <input type="text" name="description[main]" class="form-control" value="{{ isset($general) ? json_decode($general->description)->main : '' }}" placeholder="General" required>
+                        <textarea name="description[text]" placeholder="Texto" class="form-control" required>{{ isset($general) ? implode("\r\n",json_decode($general->description)->text) : '' }}</textarea>
                     </div>
 
                     <div class="mb-3">
@@ -83,7 +101,8 @@
 
                     <div class="mb-3">
                         <label class="form-label"><b>Google Maps</b></label>
-                        <input type="url" name="map" class="form-control" placeholder="https://maps.google.com/maps?q=..." value="{{ isset($general) ? $general->map : '' }}">
+                        {{--<input type="text" name="map" class="form-control" placeholder='<iframe src="https://www.google.com/maps/embed?..." ></iframe>' value="{{ isset($general) ? $general->map : '' }}">--}}
+                        <textarea name="map" class="form-control" placeholder="https://www.google.com/maps/embed?..." >{{ isset($general) ? $general->map : '' }}</textarea>
                     </div>
 
                     <div class="mb-3">

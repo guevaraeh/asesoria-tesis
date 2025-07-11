@@ -102,7 +102,10 @@
                                         <div class="elementor-element elementor-element-1b051d0 elementor-widget elementor-widget-ct_image" data-id="1b051d0" data-element_type="widget" data-widget_type="ct_image.default">
                                             <div class="elementor-widget-container">
                                                 <div class="ct-image-single img-type-img ct-no-effect" data-wow-delay="ms">
+{{--
                                                     <a href="../index.htm"> <img width="466" height="122" src="{{ asset('libraries/wp-content/uploads/2021/02/logo-dark.png') }}" class="attachment-full" alt="" loading="eager" /> </a>
+--}}                                                
+                                                    <img width="466" height="122" src="{{ asset('logo_h.jpg') }}" class="attachment-full" alt="" loading="eager" />
                                                 </div>
                                             </div>
                                         </div>

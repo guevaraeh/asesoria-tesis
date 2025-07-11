@@ -121,7 +121,10 @@ About &#8211; Consultio
 "
                                                                     ></div>
                                                                     <h3 class="item--title st-line-left1 case-animate-time" data-wow-delay="ms">
+{{--
                                                                         <span class="sp-main"> <i></i> We’re a global stakeholder relations and partnership building consultancy. </span>
+--}}
+                                                                        <span class="sp-main"> <i></i> {{ isset($general) ? json_decode($general->description)->main : '-' }} </span>
                                                                     </h3>
                                                                 </div>
                                                             </div>
@@ -135,6 +138,7 @@ About &#8211; Consultio
                                                         <div class="elementor-container elementor-column-gap-extended">
                                                             <div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-71555f1" data-id="71555f1" data-element_type="column">
                                                                 <div class="elementor-widget-wrap elementor-element-populated">
+{{--
                                                                     <div
                                                                         class="elementor-element elementor-element-176c3a2 elementor-widget elementor-widget-text-editor"
                                                                         data-id="176c3a2"
@@ -154,6 +158,22 @@ About &#8211; Consultio
                                                                     >
                                                                         <div class="elementor-widget-container">We bring more than 24 years’ senior experience forging of collaborations across government.</div>
                                                                     </div>
+--}}
+                                                                    @if(isset($general))
+                                                                    @foreach(json_decode($general->description)->text as $text)
+                                                                    <div
+                                                                        class="elementor-element elementor-element-176c3a2 elementor-widget elementor-widget-text-editor"
+                                                                        data-id="176c3a2"
+                                                                        data-element_type="widget"
+                                                                        data-widget_type="text-editor.default"
+                                                                    >
+                                                                        <div class="elementor-widget-container">
+                                                                            {{ $text }}
+                                                                        </div>
+                                                                    </div>
+                                                                    @endforeach
+                                                                    @endif
+
                                                                     <div
                                                                         class="elementor-element elementor-element-11f730c elementor-widget elementor-widget-ct_list"
                                                                         data-id="11f730c"
