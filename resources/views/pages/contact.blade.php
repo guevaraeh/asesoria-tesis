@@ -459,7 +459,7 @@ Contact v.2 &#8211; Consultio
                                                                 <iframe
                                                                     loading="lazy"
                                                                     src="{{ $general->map }}"
-                                                                    title="{{ $general->address }}"
+                                                                    title="{{ json_decode($general->address)->address }}"
                                                                 ></iframe>
                                                                 @endif
                                                             </div>

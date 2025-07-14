@@ -24,7 +24,8 @@
                 </tr>
                 <tr>
                     <th>Dirección</th>
-                    <td>{{ isset($general) ? $general->address : '-' }}</td>
+                    {{--<td>{{ isset($general) ? $general->address : '-' }}</td>--}}
+                    <td>{{ isset($general) ? json_decode($general->address)->address.', '.json_decode($general->address)->region.', '.json_decode($general->address)->country : '-' }}</td>
                 </tr>
                 <tr>
                     <th>Google Maps</th>
@@ -61,7 +62,7 @@
                 </tr>
                 <tr>
                     <th>WhatsApp</th>
-                    <td>{{ preg_replace("/^(\d{3})(\d{3})(\d{3})$/", "$1 $2 $3", $main_phone->number) }}</td>
+                    <td>{{ preg_replace("/^(\d{3})(\d{3})(\d{3})$/", "$1 $2 $3", $main_phone->number) }} (Teléfono principal)</td>
                 </tr>
             </thead>
             <tbody>
@@ -96,7 +97,14 @@
 
                     <div class="mb-3">
                         <label class="form-label"><b>Dirección</b></label>
-                        <input type="text" name="address" class="form-control" placeholder="Direccion, Ciudad, País" value="{{ isset($general) ? $general->address : '' }}" required>
+                        {{--<input type="text" name="address" class="form-control" placeholder="Direccion, Ciudad, País" value="{{ isset($general) ? $general->address : '' }}" required>--}}
+                        
+                        <input type="text" name="address[address]" class="form-control" placeholder="Direccion" value="{{ isset($general) ? json_decode($general->address)->address : '' }}" required>
+                        <div class="input-group">
+                            <input type="text" name="address[region]" class="form-control" placeholder="Ciudad" value="{{ isset($general) ? json_decode($general->address)->region : '' }}" required>
+                            <input type="text" name="address[country]" class="form-control" placeholder="País" value="{{ isset($general) ? json_decode($general->address)->country : '' }}" required>
+                        </div>    
+                        
                     </div>
 
                     <div class="mb-3">

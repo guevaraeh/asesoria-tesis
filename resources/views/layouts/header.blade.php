@@ -639,7 +639,7 @@
                                         </div>
                                         <div class="ct-header-info-item ct-header-address">
                                             <div class="h-item-icon"><i class="flaticon-map text-gradient"></i></div>
-                                            <div class="h-item-meta"><label>380 St Kilda Road,</label> <span>Melbourne, Australia</span></div>
+                                            <div class="h-item-meta"><label>380 St Kilda Road,</label> <span>Melbourne, Australia{{ isset($general) : json_decode($general->address)->region.', '.json_decode($general->address)->country }}</span></div>
                                             <a href="https://www.google.com/maps?q=380+St+Kilda+Road,+Melbourne,+Australia" target="_blank" class="h-item-link"></a>
                                         </div>
                                     </div>
