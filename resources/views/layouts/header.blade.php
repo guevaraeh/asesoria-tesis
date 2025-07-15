@@ -47,8 +47,8 @@
                         </div>
                         <div class="ct-header-info-item ct-header-address">
                             <div class="h-item-icon"><i class="flaticon-map text-gradient"></i></div>
-                            <div class="h-item-meta"><label>380 St Kilda Road,</label> <span>Melbourne, Australia</span></div>
-                            <a href="https://www.google.com/maps?q=380+St+Kilda+Road,+Melbourne,+Australia" target="_blank" class="h-item-link"></a>
+                            <div class="h-item-meta"><label>{{ isset($general) ? json_decode($general->address)->address : '' }},</label> <span>{{ isset($general) ? json_decode($general->address)->region.', '.json_decode($general->address)->country : '' }}</span></div>
+                            <a href="{{ isset($general) ? $general->map : '#' }}" target="_blank" class="h-item-link"></a>
                         </div>
                     </div>
                 </div>
@@ -639,8 +639,8 @@
                                         </div>
                                         <div class="ct-header-info-item ct-header-address">
                                             <div class="h-item-icon"><i class="flaticon-map text-gradient"></i></div>
-                                            <div class="h-item-meta"><label>380 St Kilda Road,</label> <span>Melbourne, Australia{{ isset($general) : json_decode($general->address)->region.', '.json_decode($general->address)->country }}</span></div>
-                                            <a href="https://www.google.com/maps?q=380+St+Kilda+Road,+Melbourne,+Australia" target="_blank" class="h-item-link"></a>
+                                            <div class="h-item-meta"><label>{{ isset($general) ? json_decode($general->address)->address : '' }},</label> <span>{{ isset($general) ? json_decode($general->address)->region.', '.json_decode($general->address)->country : '' }}</span></div>
+                                            <a href="{{ isset($general) ? $general->map : '#' }}" target="_blank" class="h-item-link"></a>
                                         </div>
                                     </div>
                                     <div class="ct-header-button-mobile"><a class="btn btn-default" href="../contact/index.htm" target="_self">Appionment</a></div>

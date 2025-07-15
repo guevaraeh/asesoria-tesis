@@ -29,20 +29,28 @@
                 </tr>
                 <tr>
                     <th>Google Maps</th>
-                    <td>{{ isset($general) ? $general->map : '-' }}</td>
+                    <td>
+                        @if(isset($general))
+                        <a href="{{ $general->map }}" target="_blank">{{ $general->map }}</a>
+                        @endif
+                    </td>
                 </tr>
                 @if(isset($general))
                 <tr>
                     <th></th>
                     <td>
-                        {{-- {!! $general->map !!} --}}
-                        <iframe src="{{ $general->map }}" width="500" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        {{ $general->map_embed }}<br>
+                        <iframe src="{{ $general->map_embed }}" width="500" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </td>
                 </tr>
                 @endif
                 <tr>
                     <th>CV</th>
                     <td><a href="{{ route('download_cv') }}"><i class="bi bi-download"></i></a></td>
+                </tr>
+                <tr>
+                    <th>Renacyt</th>
+                    <td>{{ isset($general) ? $general->renacyt : '-' }}</td>
                 </tr>
                 <tr>
                     <th>Facebook</th>
@@ -116,6 +124,11 @@
                     <div class="mb-3">
                         <label class="form-label"><b>CV</b></label>
                         <input type="file" name="cv" class="form-control">
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label class="form-label"><b>Renacyt</b></label>
+                        <input type="url" name="renacyt" class="form-control" placeholder="" value="{{ isset($general) ? $general->renacyt : '' }}">
                     </div>
 
                     <div class="mb-3">

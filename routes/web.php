@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ClientController;
 
 /*Route::get('/', function () {
@@ -37,3 +38,7 @@ Route::delete('/admin/email/{email}/destroy', [ContactController::class, 'destro
 Route::post('/admin/service/store', [ServiceController::class, 'store'])->name('service.store');
 Route::put('/admin/service/{service}/update', [ServiceController::class, 'update'])->name('service.update');
 Route::delete('/admin/service/{service}/destroy', [ServiceController::class, 'destroy'])->name('service.destroy');
+
+Route::post('/admin/comment/store', [AboutController::class, 'store_comment'])->name('comment.store');
+Route::put('/admin/comment/{comment}/update', [AboutController::class, 'update_comment'])->name('comment.update');
+Route::delete('/admin/comment/{comment}/destroy', [AboutController::class, 'destroy_comment'])->name('comment.destroy');

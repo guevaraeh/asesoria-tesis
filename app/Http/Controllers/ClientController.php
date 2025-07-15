@@ -6,6 +6,7 @@ use App\Models\General;
 use App\Models\Phone;
 use App\Models\Email;
 use App\Models\Service;
+use App\Models\Comment;
 
 use Illuminate\Support\Facades\Mail;
 use App\Mail\ContactEmail;
@@ -28,8 +29,10 @@ class ClientController extends Controller
         $general = General::first();
         $main_phone = Phone::where('main',1)->first();
         $main_email = Email::where('main',1)->first();
+        $services = Service::limit(4)->get();
+        $comments = Comment::get();
 
-        return view('pages.about', ['general' => $general, 'main_phone' => $main_phone, 'main_email' => $main_email]);
+        return view('pages.about', ['general' => $general, 'main_phone' => $main_phone, 'main_email' => $main_email, 'services' => $services, 'comments' => $comments]);
     }
 
     public function contact()

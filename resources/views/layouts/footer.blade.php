@@ -123,7 +123,7 @@
                                                             data-css="
 "
                                                         ></div>
-                                                        <div class="ct-text-editor elementor-clearfix">We work with a passion of taking challenges and creating new ones in advertising sector.</div>
+                                                        <div class="ct-text-editor elementor-clearfix">{{ isset($general) ? json_decode($general->description)->main : '-' }}</div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -142,8 +142,8 @@
 "
                                                     ></div>
                                                     <span class="ct-icon-active"></span>
-                                                    <a href="index.htm" class="btn btn-default icon-active btn-inline-block" data-wow-delay="ms">
-                                                        <span class="ct-button-icon ct-align-icon-"> </span> <span class="ct-button-text">About us </span>
+                                                    <a href="{{ route('about') }}" class="btn btn-default icon-active btn-inline-block" data-wow-delay="ms">
+                                                        <span class="ct-button-icon ct-align-icon-"> </span> <span class="ct-button-text">Acerca de nosotros </span>
                                                     </a>
                                                 </div>
                                             </div>
@@ -250,7 +250,7 @@
                                                             data-css="
 "
                                                         ></div>
-                                                        <h3 class="item--title st-default case-animate-time" data-wow-delay="ms"><span class="sp-main"> Official info: </span></h3>
+                                                        <h3 class="item--title st-default case-animate-time" data-wow-delay="ms"><span class="sp-main"> Información Oficial: </span></h3>
                                                     </div>
                                                 </div>
                                             </div>
@@ -271,12 +271,12 @@
                                                     <li>
                                                         <span class="ct-contact-icon"> <i aria-hidden="true" class="fas fa-map-marker-alt"></i> </span>
                                                         <span class="ct-contact-content">
-                                                            30 Commercial Road<br />
-                                                            Fratton, Australia
+                                                            {{ isset($general) ? json_decode($general->address)->address : '' }}<br />
+                                                            {{ isset($general) ? json_decode($general->address)->region.', '.json_decode($general->address)->country : '' }}
                                                         </span>
                                                     </li>
                                                     <li>
-                                                        <span class="ct-contact-icon"> <i aria-hidden="true" class="fas fa-phone-alt"></i> </span> <span class="ct-contact-content"> 1-888-452-1505 </span>
+                                                        <span class="ct-contact-icon"> <i aria-hidden="true" class="fas fa-phone-alt"></i> </span> <span class="ct-contact-content"> +51 {{ preg_replace("/^(\d{3})(\d{3})(\d{3})$/", "$1 $2 $3", $main_phone->number) }} </span>
                                                     </li>
                                                 </ul>
                                             </div>

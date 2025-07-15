@@ -39,6 +39,10 @@
                     @include('admin.service.service')
                     </div>
 
+                    <div class="col-lg-12">
+                    @include('admin.about.comment')
+                    </div>
+
                 </div>
             </div>
 

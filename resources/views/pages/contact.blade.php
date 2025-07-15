@@ -170,7 +170,7 @@ Contact v.2 &#8211; Consultio
                                                                                 <div class="item--icon"><i aria-hidden="true" class="fas fa-map-marker-alt"></i></div>
                                                                                 <div class="item--holder">
                                                                                     <h3 class="item--title">Dirección de nuestra oficina central:</h3>
-                                                                                    <div class="item--description">3556 Hartford Way Vlg, Mount Pleasant, SC, 29466, Australia.</div>
+                                                                                    <div class="item--description">{{ isset($general) ? json_decode($general->address)->address.', '.json_decode($general->address)->region.', '.json_decode($general->address)->country : '-' }}</div>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -455,10 +455,9 @@ Contact v.2 &#8211; Consultio
                                                                 ></iframe>
 --}}
                                                                 @if(isset($general))
-                                                                {{--  {!! $general->map !!} --}}
                                                                 <iframe
                                                                     loading="lazy"
-                                                                    src="{{ $general->map }}"
+                                                                    src="{{ $general->map_embed }}"
                                                                     title="{{ json_decode($general->address)->address }}"
                                                                 ></iframe>
                                                                 @endif

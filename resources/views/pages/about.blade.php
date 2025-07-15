@@ -371,6 +371,33 @@ About &#8211; Consultio
                                                             >
                                                                 <div class="ct-grid-overlay"></div>
                                                                 <div class="ct-grid-inner ct-grid-masonry row animate-time" data-gutter="15">
+
+                                                                    @foreach($services as $service)
+                                                                    <div class="grid-item col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12 digital">
+                                                                        <div class="grid-item-inner active-featured">
+                                                                            <div class="item--featured">
+                                                                                <img
+                                                                                    decoding="async"
+                                                                                    class="disable-lazy no-lazyload"
+                                                                                    src="{{ asset('libraries/wp-content/uploads/2020/03/update-service-01-450x450.jpg') }}"
+                                                                                    width="450"
+                                                                                    height="450"
+                                                                                    alt="update-service-01"
+                                                                                    title="update-service-01"
+                                                                                />
+                                                                            </div>
+                                                                            <div class="item--meta"><h3 class="item--title">{{ $service->title }}</h3></div>
+                                                                            <div class="item--holder">
+                                                                                <div class="item--holder-inner">
+                                                                                    <h3 class="item--title">{{ $service->title }}</h3>
+                                                                                    <div class="item--content">{{ $service->content }}</div>
+                                                                                    <div class="entry-readmore"><a class="btn btn-default" href="{{ route('services') }}"> Leer mas... </a></div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    @endforeach
+{{--
                                                                     <div class="grid-item col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12 digital">
                                                                         <div class="grid-item-inner active-featured">
                                                                             <div class="item--featured">
@@ -464,6 +491,8 @@ About &#8211; Consultio
                                                                             </div>
                                                                         </div>
                                                                     </div>
+--}}
+
                                                                     <div class="grid-sizer col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12"></div>
                                                                 </div>
                                                             </div>
@@ -495,12 +524,12 @@ About &#8211; Consultio
                                             </div>
                                         </div>
                                     </section>
+{{--               
                                     <section
                                         class="elementor-section elementor-top-section elementor-element elementor-element-a158a9e elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-height-default ct-header-fixed-none ct-row-max-none"
                                         data-id="a158a9e"
                                         data-element_type="section"
-                                        data-settings='{"stretch_section":"section-stretched","background_background":"classic"}'
-                                    >
+                                        data-settings='{"stretch_section":"section-stretched","background_background":"classic"}'>
                                         <div class="elementor-background-overlay"></div>
                                         <div class="elementor-container elementor-column-gap-extended">
                                             <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-30c4d43" data-id="30c4d43" data-element_type="column">
@@ -524,8 +553,7 @@ About &#8211; Consultio
                                                                                 <div class="ct-item--inner">
                                                                                     <div
                                                                                         class="ct-inline-css"
-                                                                                        data-css="
-"
+                                                                                        data-css=""
                                                                                     ></div>
                                                                                     <h3 class="item--title st-line-left1 case-animate-time" data-wow-delay="ms">
                                                                                         <span class="sp-main"> <i></i> Consultio is a professional consulting company </span>
@@ -646,12 +674,14 @@ About &#8211; Consultio
                                             </div>
                                         </div>
                                     </section>
+--}}
+
+                                    @if(isset($comments))
                                     <section
                                         class="elementor-section elementor-top-section elementor-element elementor-element-7d781fc elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-height-default ct-header-fixed-none ct-row-max-none"
                                         data-id="7d781fc"
                                         data-element_type="section"
-                                        data-settings='{"stretch_section":"section-stretched","background_background":"classic"}'
-                                    >
+                                        data-settings='{"stretch_section":"section-stretched","background_background":"classic"}'>
                                         <div class="elementor-container elementor-column-gap-extended">
                                             <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-957d09c" data-id="957d09c" data-element_type="column">
                                                 <div class="elementor-widget-wrap elementor-element-populated">
@@ -674,11 +704,10 @@ About &#8211; Consultio
                                                                                 <div class="ct-item--inner">
                                                                                     <div
                                                                                         class="ct-inline-css"
-                                                                                        data-css="
-"
+                                                                                        data-css=""
                                                                                     ></div>
                                                                                     <h3 class="item--title st-line-left1 case-animate-time" data-wow-delay="ms">
-                                                                                        <span class="sp-main"> <i></i> We have many reviews from our satisfied clients. </span>
+                                                                                        <span class="sp-main"> <i></i> Tenemos muchas reseñas de nuestros clientes satisfechos. </span>
                                                                                     </h3>
                                                                                 </div>
                                                                             </div>
@@ -717,6 +746,31 @@ About &#8211; Consultio
                                                                         data-dir="false"
                                                                         data-slidestoscroll="1"
                                                                     >
+                                                                        @foreach($comments as $comment)
+                                                                        <div class="slick-slide">
+                                                                            <div class="item--inner">
+                                                                                <div class="item-icon"><i>”</i></div>
+                                                                                <div class="item--image">
+                                                                                    <img
+                                                                                        loading="lazy"
+                                                                                        decoding="async"
+                                                                                        class=""
+                                                                                        src="{{ asset('libraries/wp-content/uploads/2019/12/testimonial-07.jpg') }}"
+                                                                                        width="130"
+                                                                                        height="130"
+                                                                                        alt="testimonial-07"
+                                                                                        title="testimonial-07"
+                                                                                    />
+                                                                                </div>
+                                                                                <div class="item--holder">
+                                                                                    <div class="item--description">{{ $comment->comment }}</div>
+                                                                                    <h3 class="item--title">{{ $comment->name }}</h3>
+                                                                                    <div class="item--position">{{ $comment->position }}</div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        @endforeach
+{{--
                                                                         <div class="slick-slide">
                                                                             <div class="item--inner">
                                                                                 <div class="item-icon"><i>”</i></div>
@@ -809,6 +863,8 @@ About &#8211; Consultio
                                                                                 </div>
                                                                             </div>
                                                                         </div>
+--}}
+
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -818,6 +874,8 @@ About &#8211; Consultio
                                             </div>
                                         </div>
                                     </section>
+                                    @endif
+
                                     <section
                                         class="elementor-section elementor-top-section elementor-element elementor-element-720bd044 elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-height-default ct-header-fixed-none ct-row-max-none"
                                         data-id="720bd044"
