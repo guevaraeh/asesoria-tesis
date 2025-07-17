@@ -18,8 +18,10 @@
             }
         </style>
         <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+{{--
         <link rel="alternate" type="application/rss+xml" title="Consultio &raquo; Feed" href="../feed/index.htm" />
         <link rel="alternate" type="application/rss+xml" title="Consultio &raquo; Comments Feed" href="../comments/feed/index.htm" />
+--}}
         <script type="text/javascript">
             /* <![CDATA[ */
             window._wpemojiSettings = {

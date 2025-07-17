@@ -73,13 +73,15 @@
                             <nav class="ct-main-navigation">
                                 <div class="ct-main-navigation-inner">
                                     <div class="ct-logo-mobile">
-                                        <a href="" title="" rel="home"><img src="{{ asset('libraries/wp-content/uploads/2021/02/logo-dark.png') }}" alt="" /></a>
+                                        <a href="" title="" rel="home"><img src="{{ asset('logo_h.jpg') }}" alt="" /></a>
                                     </div>
+{{--
                                     <div class="header-mobile-search">
                                         <form role="search" method="get" action="https://demo.casethemes.net/consultio-digital-marketing/">
                                             <input type="text" placeholder="Search..." name="s" class="search-field" /> <button type="submit" class="search-submit"><i class="fac fac-search"></i></button>
                                         </form>
                                     </div>
+--}}
                                     <ul id="menu-main-menu" class="ct-main-menu sub-hover children-plus clearfix">
                                         <li id="menu-item-3911" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3911">
                                             <a href="{{ route('welcome') }}">

@@ -23,23 +23,20 @@
             <div class="container">
                 <div class="row">
 
-                    <div class="col-lg-12">
+                    <div class="col-lg-8">
                     @include('admin.about.information')
                     </div>
 
-                    <div class="col-lg-6">
+                    <div class="col-lg-4">
                     @include('admin.contact.phone')
-                    </div>
-
-                    <div class="col-lg-6">
                     @include('admin.contact.email')
                     </div>
 
-                    <div class="col-lg-12">
+                    <div class="col-lg-6">
                     @include('admin.service.service')
                     </div>
 
-                    <div class="col-lg-12">
+                    <div class="col-lg-6">
                     @include('admin.about.comment')
                     </div>
 
@@ -67,6 +64,14 @@
             $('#stitle').val($(this).attr('stitle'));
             $('#scontent').val($(this).attr('scontent'));
         });
+
+        $('.edit-comment').click(function() {
+            $('#form-edit-comment').attr('action',$(this).val());
+            $('#sname').val($(this).attr('sname'));
+            $('#sposition').val($(this).attr('sposition'));
+            $('#scomment').val($(this).attr('scomment'));
+        });
+
         var dt= new DataTable('#datat', {
             searching: false,
             info: false,

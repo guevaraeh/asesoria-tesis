@@ -12,7 +12,6 @@
             <table class="table table-hover table-bordered">
                 <thead>
                     <tr>
-                        <th>N°</th>
                         <th>Correo</th>
                         <th>Principal</th>
                         <th></th>
@@ -21,7 +20,6 @@
                 <tbody>
                 @foreach($emails as $email)
                     <tr>
-                        <td>{{ $loop->iteration }}</td>
                         <td>{{ $email->email }}</td>
                         <td>{{ $email->main ? 'Si' : 'No' }}</td>
                         <td>

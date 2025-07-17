@@ -12,7 +12,6 @@
             <table class="table table-hover table-bordered">
             <thead>
                 <tr>
-                    <th>N°</th>
                     <th>Numero de Teléfono</th>
                     <th>Principal</th>
                     <th></th>
@@ -21,7 +20,6 @@
             <tbody>
             @foreach($phones as $phone)
                 <tr>
-                    <td>{{ $loop->iteration }}</td>
                     <td>{{ preg_replace("/^(\d{3})(\d{3})(\d{3})$/", "$1 $2 $3", $phone->number) }}</td>
                     <td>{{ $phone->main ? 'Si' : 'No' }}</td>
                     <td>
